@@ -4,14 +4,16 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Jordon Calder | Portfolio</title>
 
 <link rel="stylesheet" href="style.css">
 
-</head>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+</head>
 
 <body>
 
@@ -36,8 +38,9 @@
 </header>
 
 
-
 <section class="hero">
+
+<img src="images/profile.jpg" class="profile">
 
 <h1>Jordon Calder</h1>
 
@@ -48,102 +51,78 @@ Data Analytics | Fraud Detection | Data Engineering
 
 </p>
 
-<a class="btn" href="#projects">Explore My Work</a>
+<a class="btn" href="#projects">View My Work</a>
 
 </section>
 
 
-
-<section id="about" class="section">
+<section id="about" class="reveal">
 
 <h2>About Me</h2>
 
-<img src="images/profile.jpg" class="profile">
-
 <p>
 
-Data analytics professional with experience monitoring fraud and
-revenue assurance across 17+ telecom markets.
+Data analytics professional specializing in telecom fraud detection,
+revenue assurance and data engineering across 17+ international markets.
 
-I specialize in building Python analytics pipelines, SQL data models,
-and Power BI dashboards used by leadership to monitor operational risk.
-
-Outside technology I provide residential repair services including
-tiling, masonry, carpentry and plumbing while also supporting
-community barbering initiatives.
+Beyond technology I also provide residential improvement services
+including tiling, masonry, plumbing and carpentry while offering
+community barbering services.
 
 </p>
 
 </section>
 
 
-
-<section id="skills" class="section">
+<section id="skills" class="reveal">
 
 <h2>Technical Skills</h2>
 
-<div class="skills">
+<div class="grid">
 
-<div class="skill">Python</div>
-<div class="skill">SQL</div>
-<div class="skill">Power BI</div>
-<div class="skill">Oracle</div>
-<div class="skill">ETL Pipelines</div>
-<div class="skill">Fraud Analytics</div>
+<div class="card"><i class="fa-brands fa-python"></i> Python</div>
+<div class="card"><i class="fa-solid fa-database"></i> SQL</div>
+<div class="card"><i class="fa-solid fa-chart-line"></i> Power BI</div>
+<div class="card"><i class="fa-solid fa-gears"></i> Data Engineering</div>
+<div class="card"><i class="fa-solid fa-shield"></i> Fraud Analytics</div>
+<div class="card"><i class="fa-solid fa-server"></i> ETL Pipelines</div>
 
 </div>
 
 </section>
 
 
+<section id="projects" class="reveal">
 
-<section id="projects" class="section">
-
-<h2>Featured Projects</h2>
+<h2>Projects</h2>
 
 <div class="grid">
 
-<div class="card">
+<div class="card project">
 
-<img src="images/analytics.jpg">
+<h3>Telecom Fraud Detection</h3>
 
-<h3>Fraud Detection Analytics</h3>
+<p>Network analytics detecting suspicious MSISDN behavior.</p>
 
-<p>
-
-Python network analytics identifying suspicious MSISDN behavior.
-
-</p>
+<a href="https://github.com/CaldTech">View Project</a>
 
 </div>
 
 
-<div class="card">
-
-<img src="images/analytics.jpg">
+<div class="card project">
 
 <h3>Revenue Assurance Dashboard</h3>
 
-<p>
-
-Power BI dashboards visualizing telecom revenue leakage.
-
-</p>
+<p>Power BI dashboards analyzing telecom revenue leakage.</p>
 
 </div>
 
 
-<div class="card">
-
-<img src="images/analytics.jpg">
+<div class="card project">
 
 <h3>Python ETL Pipeline</h3>
 
-<p>
-
-Automated scripts merging telecom datasets.
-
-</p>
+<p>Automated telecom data processing pipeline.</p>
 
 </div>
 
@@ -152,55 +131,51 @@ Automated scripts merging telecom datasets.
 </section>
 
 
+<section id="services" class="reveal">
 
-<section id="services" class="section">
+<h2>Residential & Community Services</h2>
 
-<h2>Residential Services</h2>
+<ul>
 
-<div class="grid">
+<li>Tiling</li>
+<li>Masonry</li>
+<li>Carpentry</li>
+<li>Plumbing</li>
+<li>Community Barbering</li>
 
-<div class="card">
-
-<img src="images/construction.jpg">
-
-<h3>Tiling & Masonry</h3>
-
-</div>
-
-<div class="card">
-
-<img src="images/construction.jpg">
-
-<h3>Carpentry</h3>
-
-</div>
-
-<div class="card">
-
-<img src="images/construction.jpg">
-
-<h3>Plumbing</h3>
-
-</div>
-
-</div>
+</ul>
 
 </section>
 
 
-
-<section id="contact" class="section">
+<section id="contact" class="reveal">
 
 <h2>Contact</h2>
 
 <p>Email: jordon_calder@outlook.com</p>
 
+<p>
+
 <a href="https://github.com/CaldTech">GitHub</a>
+
+</p>
+
+<p>
 
 <a href="https://www.linkedin.com/in/jordon-calder-b24b8595/">LinkedIn</a>
 
+</p>
+
 </section>
 
+
+<a class="whatsapp-float"
+href="https://wa.me/18768532705"
+target="_blank">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+</a>
 
 
 <footer>
@@ -209,21 +184,7 @@ Automated scripts merging telecom datasets.
 
 </footer>
 
-
-
-<!-- Floating WhatsApp Button -->
-
-<a class="whatsapp-float"
-href="https://wa.me/18768532705"
-target="_blank">
-
-<img src="icons/whatsapp.svg">
-
-</a>
-
-
 <script src="script.js"></script>
 
 </body>
-
 </html>
