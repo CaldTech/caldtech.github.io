@@ -1,21 +1,15 @@
-function reveal(){
+function toggleMenu(){
 
-let reveals=document.querySelectorAll(".reveal");
+let nav = document.getElementById("nav");
 
-for(let i=0;i<reveals.length;i++){
+if(nav.style.display === "block"){
 
-let windowHeight=window.innerHeight;
-let elementTop=reveals[i].getBoundingClientRect().top;
-let elementVisible=150;
+nav.style.display="none";
 
-if(elementTop < windowHeight - elementVisible){
+}else{
 
-reveals[i].classList.add("active");
+nav.style.display="block";
 
 }
 
 }
-
-}
-
-window.addEventListener("scroll",reveal);
