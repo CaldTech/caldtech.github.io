@@ -1,174 +1,126 @@
 body{
 
-font-family:system-ui;
+font-family:Arial, Helvetica;
 margin:0;
-background:#0f172a;
-color:white;
-scroll-behavior:smooth;
+background:#f5f7fb;
+color:#333;
 
 }
 
-
-nav{
+header{
 
 display:flex;
 justify-content:space-between;
-padding:20px 8%;
-background:#020617;
-position:sticky;
-top:0;
+align-items:center;
+padding:20px 10%;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
 
 }
-
-
-nav ul{
-
-display:flex;
-gap:25px;
-list-style:none;
-
-}
-
 
 nav a{
 
+margin-left:20px;
 text-decoration:none;
-color:white;
+color:#333;
+font-weight:500;
 
 }
-
 
 .hero{
 
-height:90vh;
 display:flex;
 align-items:center;
-justify-content:center;
-text-align:center;
+justify-content:space-between;
+padding:80px 10%;
+flex-wrap:wrap;
 
 }
 
+.hero-text{
 
-.profile{
-
-width:160px;
-border-radius:50%;
-margin-bottom:20px;
+max-width:500px;
 
 }
 
+.hero-img{
 
-.hero h1{
-
-font-size:48px;
-
-}
-
-
-.hero-buttons{
-
-margin-top:20px;
+width:280px;
+border-radius:10px;
 
 }
-
 
 .btn{
 
-background:#3b82f6;
-padding:12px 25px;
-border-radius:8px;
-text-decoration:none;
+display:inline-block;
+margin-top:20px;
+padding:12px 20px;
+background:#2563eb;
 color:white;
-margin-right:10px;
+border-radius:6px;
+text-decoration:none;
 
 }
-
-
-.btn-outline{
-
-border:2px solid #3b82f6;
-padding:12px 25px;
-border-radius:8px;
-text-decoration:none;
-color:white;
-
-}
-
 
 section{
 
-padding:80px 12%;
+padding:70px 10%;
 
 }
 
-
-.grid{
+.projects-grid{
 
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
 
 }
 
+.project{
 
-.card{
-
-background:#1e293b;
+background:white;
 padding:25px;
-border-radius:12px;
-transition:0.3s;
-
-}
-
-
-.card:hover{
-
-transform:translateY(-10px);
-background:#334155;
-
-}
-
-
-.skills{
-
-max-width:600px;
-
-}
-
-
-.bar{
-
-height:10px;
-background:#334155;
 border-radius:10px;
-margin-top:5px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
 
 }
 
+.skills-grid{
 
-.bar div{
-
-height:10px;
-background:#3b82f6;
-border-radius:10px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:15px;
 
 }
 
+.skill{
 
-/* floating whatsapp */
+background:white;
+padding:15px;
+text-align:center;
+border-radius:8px;
+box-shadow:0 3px 8px rgba(0,0,0,0.08);
 
-.whatsapp-float{
+}
+
+footer{
+
+text-align:center;
+padding:30px;
+background:white;
+margin-top:50px;
+
+}
+
+.whatsapp{
 
 position:fixed;
-bottom:25px;
-right:25px;
+bottom:20px;
+right:20px;
 background:#25D366;
 color:white;
-font-size:30px;
+font-size:28px;
 padding:15px;
 border-radius:50%;
-z-index:999;
-
-box-shadow:0 4px 10px rgba(0,0,0,0.4);
 
 }
