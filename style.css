@@ -1,84 +1,165 @@
 body{
+
 font-family:Arial;
 margin:0;
 background:#0f172a;
 color:white;
+
 }
 
+
 nav{
+
 display:flex;
 justify-content:space-between;
 padding:20px;
 background:#020617;
+
 }
 
+
 nav ul{
+
 display:flex;
 gap:20px;
 list-style:none;
+
 }
+
 
 nav a{
+
 color:white;
 text-decoration:none;
+
 }
 
+
 .hero{
+
 height:90vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
+
 }
 
-.hero h1{
-font-size:50px;
-}
 
 .btn{
+
 background:#3b82f6;
-padding:10px 20px;
-border-radius:5px;
+padding:12px 25px;
+border-radius:6px;
 color:white;
 text-decoration:none;
+
 }
 
-section{
+
+.section{
+
 padding:80px 10%;
+text-align:center;
+
 }
+
 
 .grid{
+
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+
 }
+
 
 .card{
+
 background:#1e293b;
-padding:20px;
 border-radius:10px;
+padding:20px;
 transition:0.3s;
+
 }
+
+
+.card img{
+
+width:100%;
+border-radius:10px;
+
+}
+
 
 .card:hover{
+
 transform:translateY(-10px);
 background:#334155;
+
 }
 
+
+.skills{
+
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+justify-content:center;
+
+}
+
+
+.skill{
+
+background:#1e293b;
+padding:10px 20px;
+border-radius:6px;
+
+}
+
+
+.profile{
+
+width:180px;
+border-radius:100px;
+margin-bottom:20px;
+
+}
+
+
 footer{
+
 text-align:center;
 padding:20px;
 background:#020617;
-}
-.whatsapp{
 
-display:inline-block;
-margin-top:20px;
-padding:12px 20px;
+}
+
+
+
+/* WhatsApp Floating Button */
+
+.whatsapp-float{
+
+position:fixed;
+bottom:20px;
+right:20px;
+width:60px;
+height:60px;
 background:#25D366;
-color:white;
-text-decoration:none;
-border-radius:8px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+box-shadow:0 4px 10px rgba(0,0,0,0.4);
+
+}
+
+
+.whatsapp-float img{
+
+width:35px;
 
 }
