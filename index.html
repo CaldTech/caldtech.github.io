@@ -4,9 +4,9 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Jordon Calder</title>
+<title>Jordon Calder | Data Analytics Portfolio</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -17,188 +17,170 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 <body>
 
+
 <header>
 
-<nav>
+<div class="logo">Jordon Calder</div>
 
-<h2>CaldTech</h2>
+<nav id="nav">
 
-<ul>
-
-<li><a href="#about">About</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#contact">Contact</a></li>
-
-</ul>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
 
 </nav>
+
+<div class="menu-toggle" onclick="toggleMenu()">
+
+<i class="fa fa-bars"></i>
+
+</div>
 
 </header>
 
 
 <section class="hero">
 
-<div class="hero-content">
+<div class="hero-text">
 
-<img src="images/profile.jpg" class="profile">
-
-<h1>Jordon Calder</h1>
+<h1>Data Analytics & Engineering Portfolio</h1>
 
 <p>
 
-Senior Business Risk Analyst  
-Data Analytics | Fraud Detection | Data Engineering
+Senior Business Risk Analyst specializing in
+data engineering, analytics, and revenue assurance.
 
 </p>
 
-<div class="hero-buttons">
-
 <a href="#projects" class="btn">View Projects</a>
 
-<a href="resume.html" class="btn-outline">Download Resume</a>
-
 </div>
 
-</div>
+<img src="images/profile.jpg" class="hero-img">
 
 </section>
 
 
-<section id="about" class="reveal">
+
+<section id="about">
 
 <h2>About Me</h2>
 
 <p>
 
-Data analytics professional specializing in telecom fraud detection
-and revenue assurance across 17+ international markets.
+I am a data analytics professional with experience
+in telecom revenue assurance, large-scale data
+processing, and analytics engineering.
 
-I also provide residential services including tiling, masonry,
-carpentry and plumbing, and volunteer barbering services
-within my community.
+My work focuses on transforming complex data
+into meaningful insights using Python, SQL,
+Power BI and modern data pipelines.
 
 </p>
 
 </section>
 
 
-<section id="projects" class="reveal">
+
+<section id="projects">
 
 <h2>Featured Projects</h2>
 
-<div class="grid">
-
-<div class="card">
-
-<h3>Fraud Detection Network</h3>
-
-<p>Python analytics detecting suspicious telecom traffic.</p>
-
-<a href="https://github.com/CaldTech">View Code</a>
-
-</div>
+<div class="projects-grid">
 
 
-<div class="card">
+<div class="project">
 
 <h3>Revenue Assurance Dashboard</h3>
 
-<p>Power BI dashboard monitoring telecom revenue leakage.</p>
+<p>Power BI dashboard monitoring telecom revenue performance.</p>
+
+<iframe width="100%" height="300"
+src="https://app.powerbi.com/view?r=YOUR_LINK">
+</iframe>
 
 </div>
 
 
-<div class="card">
+<div class="project">
 
-<h3>Python ETL Pipeline</h3>
+<h3>Python Data Pipeline</h3>
 
-<p>Automated telecom data integration system.</p>
+<p>Automated ETL pipeline integrating Oracle and SQL Server data.</p>
+
+<a href="https://github.com/CaldTech" target="_blank">
+
+View Code
+
+</a>
 
 </div>
+
+
+<div class="project">
+
+<h3>Data Engineering Automation</h3>
+
+<p>Python automation for telecom analytics processing.</p>
+
+<a href="https://github.com/CaldTech">
+
+View Project
+
+</a>
+
+</div>
+
 
 </div>
 
 </section>
 
 
-<section id="skills" class="reveal">
+
+<section id="skills">
 
 <h2>Technical Skills</h2>
 
-<div class="skills">
+<div class="skills-grid">
 
-<div class="skill">
-
-<span>Python</span>
-
-<div class="bar"><div style="width:90%"></div></div>
-
-</div>
-
-<div class="skill">
-
-<span>SQL</span>
-
-<div class="bar"><div style="width:93%"></div></div>
-
-</div>
-
-<div class="skill">
-
-<span>Power BI</span>
-
-<div class="bar"><div style="width:86%"></div></div>
-
-</div>
+<div class="skill">Python</div>
+<div class="skill">SQL</div>
+<div class="skill">Power BI</div>
+<div class="skill">Data Engineering</div>
+<div class="skill">ETL Pipelines</div>
+<div class="skill">Analytics Engineering</div>
 
 </div>
 
 </section>
 
 
-<section id="services" class="reveal">
 
-<h2>Residential & Community Services</h2>
-
-<ul>
-
-<li>Tiling</li>
-<li>Masonry</li>
-<li>Carpentry</li>
-<li>Plumbing</li>
-<li>Community Barbering</li>
-
-</ul>
-
-</section>
-
-
-<section id="contact" class="reveal">
+<section id="contact">
 
 <h2>Contact</h2>
 
 <p>Email: jordon_calder@outlook.com</p>
 
 <p>
-<a href="https://github.com/CaldTech">GitHub</a>
-</p>
 
-<p>
+<a href="https://github.com/CaldTech">GitHub</a> |
 <a href="https://www.linkedin.com/in/jordon-calder-b24b8595/">LinkedIn</a>
+
 </p>
 
 </section>
 
 
-<a class="whatsapp-float"
-href="https://wa.me/18768532705"
-target="_blank">
 
-<i class="fa-brands fa-whatsapp"></i>
+<a href="https://wa.me/18768532705" class="whatsapp">
+
+<i class="fab fa-whatsapp"></i>
 
 </a>
+
 
 
 <footer>
@@ -206,6 +188,7 @@ target="_blank">
 <p>© 2026 Jordon Calder</p>
 
 </footer>
+
 
 <script src="script.js"></script>
 
