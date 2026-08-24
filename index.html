@@ -6,6 +6,26 @@
 <title>Jordon Calder (Chef Joe) | Portfolio & Hub</title>
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  /* Extra safeguard rule for mobile nav toggling via class */
+  @media(max-width: 768px){
+    nav#nav {
+      display: none;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background: white;
+      flex-direction: column;
+      padding: 20px 0;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    nav#nav.active {
+      display: flex !important;
+    }
+  }
+</style>
 </head>
 <body>
 
@@ -24,7 +44,7 @@
 </div>
 </header>
 
-<!-- Dashboard Profile Header (Streamlined Professional Description) -->
+<!-- Dashboard Profile Header -->
 <section id="profile" class="hero">
 <div class="profile-card">
 <img src="images/profile.jpg" class="hero-img" alt="Jordon Calder Profile">
