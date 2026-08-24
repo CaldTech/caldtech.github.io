@@ -1,4 +1,4 @@
-// Reliable mobile menu toggle via class
+// Reliable mobile menu toggle via class assignment
 function toggleMenu(){
   let nav = document.getElementById("nav");
   if(nav.classList.contains("active")){
@@ -8,16 +8,18 @@ function toggleMenu(){
   }
 }
 
-// Function to guarantee skill progress bars animate
+// Function to animate skill progress bars to their data-width values
 function animateSkillBars() {
   const progressBars = document.querySelectorAll('.skill-bar-fill');
   progressBars.forEach(bar => {
     const targetWidth = bar.getAttribute('data-width');
-    bar.style.width = targetWidth;
+    if (targetWidth) {
+      bar.style.width = targetWidth;
+    }
   });
 }
 
-// Scroll animation trigger with mobile fallback
+// Initialize triggers when page loads
 document.addEventListener("DOMContentLoaded", function() {
   const skillsSection = document.querySelector('#skills');
   
@@ -34,6 +36,6 @@ document.addEventListener("DOMContentLoaded", function() {
     observer.observe(skillsSection);
   }
   
-  // Instant fallback to force mobile bars to load if observer is skipped by mobile webviews
-  setTimeout(animateSkillBars, 1000);
+  // Guaranteed fallback: fills progress bars automatically after 800ms to prevent mobile rendering snags
+  setTimeout(animateSkillBars, 800);
 });
