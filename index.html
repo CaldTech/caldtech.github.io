@@ -12,25 +12,24 @@
 <header>
 <div class="logo">Jordon Calder <span>| Chef Joe</span></div>
 <nav id="nav">
-<a href="#profile">Profile</a>
-<a href="#about">About</a>
-<a href="#projects">Projects</a>
-<a href="#skills">Skills</a>
+<a href="#profile" onclick="toggleMenu()">Profile</a>
+<a href="#about" onclick="toggleMenu()">About</a>
+<a href="#projects" onclick="toggleMenu()">Projects</a>
+<a href="#skills" onclick="toggleMenu()">Skills</a>
 <a href="resume.html">Resume</a>
-<a href="#contact">Contact</a>
+<a href="#contact" onclick="toggleMenu()">Contact</a>
 </nav>
 <div class="menu-toggle" onclick="toggleMenu()">
 <i class="fa fa-bars"></i>
 </div>
 </header>
 
-<!-- Dashboard Profile Header with Dual-Threat Badges -->
+<!-- Dashboard Profile Header -->
 <section id="profile" class="hero">
 <div class="profile-card">
 <img src="images/profile.jpg" class="hero-img" alt="Jordon Calder Profile">
 <h2>Jordon Calder (Chef Joe)</h2>
 <p class="profile-tagline">Data Automation Specialist, Creator & Craftsman</p>
-
 
 <div class="profile-badges">
   <span class="badge data">📊 Data & Risk Analytics</span>
@@ -48,7 +47,7 @@ Bridging enterprise-level data pipelines, software engineering, and hands-on cra
 <section id="about">
 <h2>About Me</h2>
 <p>
-I am a versatile professional operating at the intersection of data analytics and tangible craftsmanship. From building automated ETL pipelines and dashboards to cooking signature dishes as Chef Joe and executing hands-on woodworking, CNC engraving, and solar builds, my work focuses on practical problem-solving and building real solutions from the ground up.
+I am a versatile professional operating at the intersection of data analytics and tangible craftsmanship. From building automated ETL pipelines and dashboards to cooking signature dishes as Chef Joe, fixing hardware like Samsung screens, and executing hands-on woodworking, CNC engraving, and solar builds, my work focuses on practical problem-solving and building real solutions from the ground up.
 </p>
 </section>
 
@@ -56,27 +55,48 @@ I am a versatile professional operating at the intersection of data analytics an
 <h2>Featured Projects & Media</h2>
 <div class="projects-stack">
 
-<!-- YouTube Video / Short Showcase Card -->
-<div class="project video-project">
-<h3><i class="fab fa-youtube" style="color: #ff0000; margin-right: 8px;"></i> Watch the Build & Automation in Action</h3>
-<p>Check out a quick showcase of my technical tutorials and automated workflows. Support the channel by subscribing on YouTube!</p>
-<div class="video-container" style="margin-top: 15px; text-align: center;">
-  <!-- Replace YOUTUBE_SHORT_ID with your actual video or short ID -->
-  <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUTUBE_SHORT_ID" title="Jordon Calder YouTube Showcase" style="border:none; border-radius:8px;" allowfullscreen></iframe>
-</div>
-<a href="https://youtube.com/@calderofficial" target="_blank" class="btn" style="background:#ff0000; margin-top:15px; display:inline-block;">Visit YouTube Channel <i class="fa fa-external-link-alt"></i></a>
-</div>
-
-<div class="project">
-<h3>Interactive Data Dashboard</h3>
-<p>Power BI visual analytics monitoring key performance indicators and metrics.</p>
-<iframe width="100%" height="300" src="https://app.powerbi.com/view?r=YOUR_LINK" title="Power BI Dashboard" style="border:none; margin-top:15px;"></iframe>
-</div>
-
+<!-- Python Automation Project + YouTube Short / Video -->
 <div class="project">
 <h3>Python Data Pipeline & Automation</h3>
 <p>Automated Python data workflows integrating structured sources for high-speed cleaning, duplicate removal, and reporting.</p>
-<a href="https://github.com/CaldTech" target="_blank" class="btn" style="margin-top:15px; padding:8px 16px; font-size:14px;">View Code <i class="fa fa-external-link-alt"></i></a>
+<div style="margin-top: 15px;">
+  <iframe width="100%" height="250" src="https://www.youtube.com/embed/YOUTUBE_SHORT_ID_PYTHON" title="Python Automation Demo" style="border:none; border-radius:8px;" allowfullscreen></iframe>
+</div>
+<div class="project-actions">
+  <a href="https://github.com/CaldTech" target="_blank" class="btn"><i class="fab fa-github"></i> View Repository</a>
+  <a href="https://youtube.com/@calderofficial" target="_blank" class="btn btn-youtube"><i class="fab fa-youtube"></i> Watch on YouTube</a>
+</div>
+</div>
+
+<!-- Samsung Screen Repair Tutorial -->
+<div class="project">
+<h3>Samsung Tablet Screen Repair & Hardware</h3>
+<p>Technical repair walkthrough showcasing precision troubleshooting and hardware restoration.</p>
+<div style="margin-top: 15px;">
+  <iframe width="100%" height="250" src="https://www.youtube.com/embed/YOUTUBE_SHORT_ID_SAMSUNG" title="Samsung Repair Tutorial" style="border:none; border-radius:8px;" allowfullscreen></iframe>
+</div>
+<div class="project-actions">
+  <a href="https://youtube.com/@calderofficial" target="_blank" class="btn btn-youtube"><i class="fab fa-youtube"></i> Watch Tutorial</a>
+</div>
+</div>
+
+<!-- Power BI Dashboard -->
+<div class="project">
+<h3>Interactive Data Dashboard</h3>
+<p>Power BI visual analytics monitoring key performance indicators and metrics.</p>
+<iframe width="100%" height="300" src="https://app.powerbi.com/view?r=YOUR_LINK" title="Power BI Dashboard" style="border:none; margin-top:15px; border-radius:8px;"></iframe>
+</div>
+
+<!-- Chef Joe & Crafts (Scrabble Punch & Banana Fritters) -->
+<div class="project">
+<h3>Chef Joe & Trades: Scrabble Art & Banana Fritters</h3>
+<p>Short-form video showcase covering hands-on creative crafts and signature culinary treats.</p>
+<div style="margin-top: 15px;">
+  <iframe width="100%" height="250" src="https://www.youtube.com/embed/YOUTUBE_SHORT_ID_CHEF" title="Chef Joe & Crafts" style="border:none; border-radius:8px;" allowfullscreen></iframe>
+</div>
+<div class="project-actions">
+  <a href="https://youtube.com/@calderofficial" target="_blank" class="btn btn-youtube"><i class="fab fa-youtube"></i> Watch Shorts</a>
+</div>
 </div>
 
 </div>
