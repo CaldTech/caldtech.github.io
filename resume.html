@@ -80,7 +80,6 @@
   }
   .back-link:hover { text-decoration: underline; }
   
-  /* Success message box hidden by default */
   #success-message {
     display: none;
   }
@@ -94,16 +93,12 @@
 <body>
 
 <div class="request-card">
-  
-  <!-- Initial Form View -->
   <div id="form-container">
     <h2>Request Professional Resume</h2>
     <p>Please provide your details below. Once submitted, your request will be reviewed and I will get back to you shortly.</p>
 
     <form action="https://api.web3forms.com/submit" method="POST" id="resumeForm">
-      
-      <!-- Replace with your free access key from web3forms.com -->
-      <input type="hidden" name="access_key" value="cff8f5ad-ccd7-451f-9ea8-8b2cb1700fc3">
+      <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
       <input type="hidden" name="subject" value="New Resume Request from Portfolio">
 
       <div class="form-group">
@@ -125,7 +120,6 @@
     </form>
   </div>
 
-  <!-- Success Confirmation View (Appears after submission) -->
   <div id="success-message">
     <div class="success-icon">✓</div>
     <h2>Request Received!</h2>
@@ -137,7 +131,6 @@
 </div>
 
 <script>
-  // Simple script to handle form submission gracefully on static hosting
   document.getElementById('resumeForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const formData = new FormData(this);
@@ -148,7 +141,6 @@
     }).then(async (response) => {
       let json = await response.json();
       if (json.success) {
-        // Switch views to show success confirmation
         document.getElementById('form-container').style.display = 'none';
         document.getElementById('success-message').style.display = 'block';
       } else {
