@@ -84,6 +84,7 @@ nav a{
   border-radius: 6px;
   text-decoration: none;
   font-weight: 500;
+  cursor: pointer;
 }
 
 section{
@@ -132,7 +133,7 @@ section{
 .skill-bar-fill {
   background: #2563eb;
   height: 100%;
-  width: 0%; /* Starts at 0, animates via JS when scrolled into view */
+  width: 0%;
   transition: width 1.2s ease-in-out;
 }
 
@@ -175,6 +176,7 @@ footer{
     padding: 20px 0;
     box-shadow: 0 5px 10px rgba(0,0,0,0.05);
     text-align: center;
+    z-index: 2000;
   }
   nav#nav.active {
     display: flex !important;
