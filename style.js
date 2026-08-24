@@ -1,4 +1,4 @@
-// Reliable mobile menu toggle using an active class
+// Reliable mobile menu toggle
 function toggleMenu(){
   let nav = document.getElementById("nav");
   if(nav.classList.contains("active")){
@@ -8,29 +8,32 @@ function toggleMenu(){
   }
 }
 
-// Scroll animation trigger for skill progress bars
+// Function to trigger skill bars
+function animateSkillBars() {
+  const progressBars = document.querySelectorAll('.skill-bar-fill');
+  progressBars.forEach(bar => {
+    const targetWidth = bar.getAttribute('data-width');
+    bar.style.width = targetWidth;
+  });
+}
+
+// Scroll animation trigger with instant fallback for mobile
 document.addEventListener("DOMContentLoaded", function() {
-  const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1
-  };
-
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const progressBars = entry.target.querySelectorAll('.skill-bar-fill');
-        progressBars.forEach(bar => {
-          const targetWidth = bar.getAttribute('data-width');
-          bar.style.width = targetWidth;
-        });
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
   const skillsSection = document.querySelector('#skills');
+  
   if (skillsSection) {
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateSkillBars();
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.05 }); // Lower threshold so it triggers earlier on mobile
+
     observer.observe(skillsSection);
   }
+  
+  // Fallback: If bars haven't animated after 1.5 seconds, force them to load (guarantees mobile visibility)
+  setTimeout(animateSkillBars, 1500);
 });
