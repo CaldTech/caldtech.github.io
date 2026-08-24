@@ -1,19 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Request Resume | Jordon Calder</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  body {
+    background: #f5f7fb;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  .request-card {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    max-width: 450px;
+    width: 90%;
+    text-align: center;
+  }
+  .request-card h2 {
+    margin-bottom: 10px;
+    color: #111;
+  }
+  .request-card p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+  .form-group {
+    text-align: left;
+    margin-bottom: 15px;
+  }
+  .form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  .form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  .form-group textarea {
+    resize: vertical;
+    height: 80px;
+  }
+  .btn-submit {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  .btn-submit:hover {
+    background: #1d4ed8;
+  }
+  .back-link {
+    display: block;
+    margin-top: 20px;
+    color: #666;
+    text-decoration: none;
+    font-size: 13px;
+  }
+  .back-link:hover { text-decoration: underline; }
+  
+  /* Success message box hidden by default */
+  #success-message {
+    display: none;
+  }
+  .success-icon {
+    font-size: 48px;
+    color: #25D366;
+    margin-bottom: 15px;
+  }
+</style>
+</head>
+<body>
+
+<div class="request-card">
+  
+  {/* Initial Form View */}
+  <div id="form-container">
+    <h2>Request Professional Resume</h2>
+    <p>Please provide your details below. Once submitted, your request will be reviewed and I will get back to you shortly.</p>
+
+    <form action="https://api.web3forms.com/submit" method="POST" id="resumeForm">
+      
+      <!-- Replace with your free access key from web3forms.com -->
+      <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+      <input type="hidden" name="subject" value="New Resume Request from Portfolio">
+
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required placeholder="John Doe">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required placeholder="john@example.com">
+      </div>
+
+      <div class="form-group">
+        <label for="company">Company / Purpose</label>
+        <textarea id="company" name="message" required placeholder="Recruiting for [Company Name] or professional connection..."></textarea>
+      </div>
+
+      <button type="submit" class="btn-submit">Submit Request</button>
+    </form>
+  </div>
+
+  {/* Success Confirmation View (Appears after submission) */}
+  <div id="success-message">
+    <div class="success-icon">✓</div>
+    <h2>Request Received!</h2>
+    <p>Thank you. Your request has been securely submitted. I am reviewing your details and will get back to you via email shortly.</p>
+    <a href="index.html" class="btn" style="background:#2563eb; color:white; padding:10px 20px; text-decoration:none; border-radius:5px; display:inline-block;">Back to Home</a>
+  </div>
+
+  <a href="index.html" class="back-link">← Back to Home</a>
+</div>
+
 <script>
-
-let password = prompt("Enter password to download resume:");
-
-if(password === "caldtech2026"){
-
-window.location.href="resume/jordon_calder_resume.pdf";
-
-}
-
-else{
-
-alert("Incorrect password");
-
-window.location.href="index.html";
-
-}
-
+  // Simple script to handle form submission gracefully on static hosting
+  document.getElementById('resumeForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = new FormData(this);
+    
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formData
+    }).then(async (response) => {
+      let json = await response.json();
+      if (json.success) {
+        // Switch views to show success confirmation
+        document.getElementById('form-container').style.display = 'none';
+        document.getElementById('success-message').style.display = 'block';
+      } else {
+        alert("Something went wrong. Please try again or email me directly.");
+      }
+    }).catch(error => {
+      alert("Submission error. Please check your connection.");
+    });
+  });
 </script>
+
+</body>
+</html>
