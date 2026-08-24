@@ -95,6 +95,7 @@
 
 <div class="request-card">
   
+  <!-- Initial Form View -->
   <div id="form-container">
     <h2>Request Professional Resume</h2>
     <p>Please provide your details below. Once submitted, your request will be reviewed and I will get back to you shortly.</p>
@@ -102,7 +103,7 @@
     <form action="https://api.web3forms.com/submit" method="POST" id="resumeForm">
       
       <!-- Replace with your free access key from web3forms.com -->
-      <input type="hidden" name="access_key" value="cff8f5ad-ccd7-451f-9ea8-8b2cb1700fc3">
+      <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
       <input type="hidden" name="subject" value="New Resume Request from Portfolio">
 
       <div class="form-group">
@@ -124,11 +125,12 @@
     </form>
   </div>
 
+  <!-- Success Confirmation View (Appears after submission) -->
   <div id="success-message">
     <div class="success-icon">✓</div>
     <h2>Request Received!</h2>
     <p>Thank you. Your request has been securely submitted. I am reviewing your details and will get back to you via email shortly.</p>
-    <a href="index.html" class="btn" style="background:#2563eb; color:white; padding:10px 20px; text-decoration:none; border-radius:5px; display:inline-block;">Back to Home</a>
+    <a href="index.html" class="btn" style="background:#2563eb; color:white; padding:10px 20px; text-decoration:none; border-radius:5px; display:inline-block; margin-top:10px;">Back to Home</a>
   </div>
 
   <a href="index.html" class="back-link">← Back to Home</a>
