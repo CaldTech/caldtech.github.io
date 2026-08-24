@@ -47,7 +47,7 @@ nav a{
   border-radius: 12px;
   padding: 30px;
   text-align: center;
-  max-width: 600px;
+  max-width: 650px;
   width: 100%;
   box-shadow: 0 5px 20px rgba(0,0,0,0.08);
 }
@@ -67,6 +67,29 @@ nav a{
   color: #2563eb;
   margin: 5px 0 15px;
 }
+
+/* Dual-Threat Badges */
+.profile-badges {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: #f1f5f9;
+  color: #334155;
+  border: 1px solid #e2e8f0;
+}
+
+.badge.chef { background: #fffbeb; color: #b45309; border-color: #fde68a; }
+.badge.data { background: #eff6ff; color: #1d4ed8; border-color: #bfdbfe; }
+.badge.trade { background: #f0fdf4; color: #15803d; border-color: #bbf7d0; }
 
 .profile-description {
   font-size: 0.95rem;
