@@ -101,13 +101,24 @@ nav a{
 .btn{
   display: inline-block;
   margin-top: 10px;
-  padding: 12px 24px;
+  padding: 10px 20px;
   background: #2563eb;
   color: white;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 500;
+  font-size: 14px;
   cursor: pointer;
+  border: none;
+}
+
+.btn-secondary {
+  background: #334155;
+  margin-left: 8px;
+}
+
+.btn-youtube {
+  background: #ff0000;
 }
 
 section{
@@ -128,6 +139,13 @@ section{
   padding: 25px;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.project-actions {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 /* Skills Layout & Progress Bars */
@@ -184,29 +202,34 @@ footer{
 .menu-toggle {
   display: none;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 24px;
+  color: #333;
 }
 
 @media(max-width: 768px){
   nav#nav {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 70px;
     left: 0;
     width: 100%;
-    background: white;
+    height: calc(100vh - 70px);
+    background: #ffffff;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 20px 0;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.05);
-    text-align: center;
-    z-index: 2000;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    z-index: 9999;
   }
   nav#nav.active {
     display: flex !important;
   }
   nav a {
-    margin: 12px 0;
+    margin: 15px 0;
+    font-size: 1.2rem;
     display: block;
+    color: #1e293b;
   }
   .menu-toggle {
     display: block;
