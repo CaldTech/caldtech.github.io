@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
-  /* Additional inline layout tweaks for the WhatsApp/Dashboard profile header */
+  /* Profile header card layout */
   .profile-header-card {
     background: #ffffff;
     border-radius: 12px;
@@ -42,6 +42,20 @@
     margin: 0;
     font-size: 0.9rem;
     color: #666;
+  }
+  /* Updated Projects Layout: Stacked vertically instead of side-by-side */
+  .projects-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .project {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   }
 </style>
 </head>
@@ -96,7 +110,7 @@ I am a versatile professional bridging data analytics and tangible craftsmanship
 
 <section id="projects">
 <h2>Featured Projects</h2>
-<div class="projects-grid">
+<div class="projects-stack">
 
 <div class="project">
 <h3>Interactive Data Dashboard</h3>
@@ -105,15 +119,15 @@ I am a versatile professional bridging data analytics and tangible craftsmanship
 </div>
 
 <div class="project">
-<h3>Python Data Pipeline</h3>
-<p>Automated Python data workflow integrating structured sources for high-speed cleaning and reporting.</p>
-<a href="https://github.com/CaldTech" target="_blank">View Code <i class="fa fa-external-link-alt"></i></a>
+<h3>Medical Revenue Pipeline</h3>
+<p>End-to-end Python, SQLite, and data validation workflow managing secure record ingestion and automated extracts[span_0](start_span)[span_0](end_span).</p>
+<a href="https://github.com/CaldTech/medical-revenue-pipeline" target="_blank">View Repository <i class="fa fa-external-link-alt"></i></a>
 </div>
 
 <div class="project">
-<h3>Automation & Tech Hub</h3>
-<p>Python script automations, cross-platform workflows, and digital documentation repository.</p>
-<a href="https://github.com/CaldTech" target="_blank">View Project <i class="fa fa-external-link-alt"></i></a>
+<h3>Python Data Pipeline & Automation</h3>
+<p>Automated Python data workflows integrating structured sources for high-speed cleaning, duplicate removal, and reporting.</p>
+<a href="https://github.com/CaldTech" target="_blank">View Code <i class="fa fa-external-link-alt"></i></a>
 </div>
 
 </div>
