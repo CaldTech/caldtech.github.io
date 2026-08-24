@@ -1,9 +1,10 @@
+// Reliable mobile menu toggle using an active class
 function toggleMenu(){
   let nav = document.getElementById("nav");
-  if(nav.style.display === "flex"){
-    nav.style.display = "none";
+  if(nav.classList.contains("active")){
+    nav.classList.remove("active");
   } else {
-    nav.style.display = "flex";
+    nav.classList.add("active");
   }
 }
 
@@ -12,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const observerOptions = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.2
+    threshold: 0.1
   };
 
   const observer = new IntersectionObserver((entries, observer) => {
