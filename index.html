@@ -4,9 +4,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Jordon Calder (Chef Joe) | Tech & Craft Portfolio</title>
+<title>Jordon Calder (Chef Joe) | Portfolio & Hub</title>
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  /* Additional inline layout tweaks for the WhatsApp/Dashboard profile header */
+  .profile-header-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    max-width: 600px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+  .profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #25D366;
+    margin-bottom: 1rem;
+  }
+  .dashboard-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+  }
+  .stat-item h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  .stat-item p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+  }
+</style>
 </head>
 
 <body>
@@ -14,6 +51,7 @@
 <header>
 <div class="logo">Jordon Calder <span>| Chef Joe</span></div>
 <nav id="nav">
+<a href="#profile">Profile</a>
 <a href="#about">About</a>
 <a href="#projects">Projects</a>
 <a href="#skills">Skills</a>
@@ -24,21 +62,35 @@
 </div>
 </header>
 
-<section class="hero">
-<div class="hero-text">
-<h1>Engineering Code, Telecom Systems & Crafting Real Life</h1>
-<p>
-Senior Business Risk Analyst & Tech Guru specializing in telecom fraud monitoring, Oracle data pipelines, automated ETL workflows, and hands-on creation.
-</p>
-<a href="#projects" class="btn">View Projects</a>
+<!-- Dashboard / WhatsApp Style Profile Section at the Top -->
+<section id="profile" class="hero">
+<div class="profile-header-card">
+<img src="images/profile.jpg" class="profile-avatar" alt="Jordon Calder Profile">
+<h1>Jordon Calder (Chef Joe)</h1>
+<p>Tech Guru, Data Automation & Culinary Creator</p>
+<div class="dashboard-stats">
+<div class="stat-item">
+<h3>Python & SQL</h3>
+<p>Automation</p>
 </div>
-<img src="images/profile.jpg" class="hero-img" alt="Jordon Calder Profile">
+<div class="stat-item">
+<h3>Power BI</h3>
+<p>Dashboards</p>
+</div>
+<div class="stat-item">
+<h3>Chef Joe</h3>
+<p>Kitchen & Trades</p>
+</div>
+</div>
+<br>
+<a href="#projects" class="btn">Explore Work</a>
+</div>
 </section>
 
 <section id="about">
 <h2>About Me</h2>
 <p>
-I am a versatile professional bridging heavy data engineering and tangible craftsmanship. From managing Oracle databases, telecom revenue assurance, and cross-region audit pipelines to building physical spaces and cooking as Chef Joe, my work focuses on robust systems, clean automation, and building real solutions from scratch.
+I am a versatile professional bridging data analytics and tangible craftsmanship. From building automated data pipelines and dashboards to cooking signature dishes as Chef Joe and executing hands-on trades, my work focuses on practical problem-solving and building real solutions from scratch.
 </p>
 </section>
 
@@ -47,14 +99,14 @@ I am a versatile professional bridging heavy data engineering and tangible craft
 <div class="projects-grid">
 
 <div class="project">
-<h3>Telecom Revenue & Fraud Dashboard</h3>
-<p>Power BI visual analytics monitoring multi-region telecommunications data and audit pipelines.</p>
+<h3>Interactive Data Dashboard</h3>
+<p>Power BI visual analytics monitoring key performance indicators and metrics.</p>
 <iframe width="100%" height="300" src="https://app.powerbi.com/view?r=YOUR_LINK" title="Power BI Dashboard"></iframe>
 </div>
 
 <div class="project">
-<h3>Oracle & Python ETL Pipeline</h3>
-<p>Automated Python data pipeline integrating Oracle and SQL Server data for high-speed cleaning and reporting.</p>
+<h3>Python Data Pipeline</h3>
+<p>Automated Python data workflow integrating structured sources for high-speed cleaning and reporting.</p>
 <a href="https://github.com/CaldTech" target="_blank">View Code <i class="fa fa-external-link-alt"></i></a>
 </div>
 
@@ -70,11 +122,11 @@ I am a versatile professional bridging heavy data engineering and tangible craft
 <section id="skills">
 <h2>Technical & Hands-On Skills</h2>
 <div class="skills-grid">
-<div class="skill"><i class="fa fa-database"></i> Oracle Systems</div>
-<div class="skill"><i class="fa fa-network-wired"></i> Telecom Fraud & Audit</div>
 <div class="skill"><i class="fa fa-code"></i> Python Automation</div>
 <div class="skill"><i class="fa fa-chart-bar"></i> Power BI Analytics</div>
 <div class="skill"><i class="fa fa-cogs"></i> ETL Pipelines</div>
+<div class="skill"><i class="fa fa-database"></i> SQL & Data Management</div>
+<div class="skill"><i class="fa fa-utensils"></i> Culinary Arts (Chef Joe)</div>
 <div class="skill"><i class="fa fa-hammer"></i> Craftsmanship & Trades</div>
 </div>
 </section>
