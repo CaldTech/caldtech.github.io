@@ -1,65 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Jordon Calder (Chef Joe) | Portfolio & Hub</title>
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<style>
-  /* Profile header card layout */
-  .profile-header-card {
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 2rem;
-    text-align: center;
-    max-width: 600px;
-    margin: 2rem auto;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  }
-  .profile-avatar {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #25D366;
-    margin-bottom: 1rem;
-  }
-  .dashboard-stats {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 1.5rem;
-    padding-top: 1rem;
-    border-top: 1px solid #eee;
-  }
-  .stat-item h3 {
-    margin: 0;
-    font-size: 1.2rem;
-    color: #333;
-  }
-  .stat-item p {
-    margin: 0;
-    font-size: 0.9rem;
-    color: #666;
-  }
-  /* Updated Projects Layout: Stacked vertically instead of side-by-side */
-  .projects-stack {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .project {
-    background: #ffffff;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  }
-</style>
 </head>
-
 <body>
 
 <header>
@@ -69,6 +16,7 @@
 <a href="#about">About</a>
 <a href="#projects">Projects</a>
 <a href="#skills">Skills</a>
+<a href="resume.html">Resume</a>
 <a href="#contact">Contact</a>
 </nav>
 <div class="menu-toggle" onclick="toggleMenu()">
@@ -76,27 +24,26 @@
 </div>
 </header>
 
-<!-- Dashboard / WhatsApp Style Profile Section at the Top -->
+<!-- Dashboard / WhatsApp Style Profile Header -->
 <section id="profile" class="hero">
-<div class="profile-header-card">
-<img src="images/profile.jpg" class="profile-avatar" alt="Jordon Calder Profile">
-<h1>Jordon Calder (Chef Joe)</h1>
+<div class="profile-card">
+<img src="images/profile.jpg" class="hero-img" alt="Jordon Calder Profile">
+<h2>Jordon Calder (Chef Joe)</h2>
 <p>Tech Guru, Data Automation & Culinary Creator</p>
 <div class="dashboard-stats">
 <div class="stat-item">
-<h3>Python & SQL</h3>
+<h4>Python & SQL</h4>
 <p>Automation</p>
 </div>
 <div class="stat-item">
-<h3>Power BI</h3>
+<h4>Power BI</h4>
 <p>Dashboards</p>
 </div>
 <div class="stat-item">
-<h3>Chef Joe</h3>
+<h4>Chef Joe</h4>
 <p>Kitchen & Trades</p>
 </div>
 </div>
-<br>
 <a href="#projects" class="btn">Explore Work</a>
 </div>
 </section>
@@ -115,19 +62,19 @@ I am a versatile professional bridging data analytics and tangible craftsmanship
 <div class="project">
 <h3>Interactive Data Dashboard</h3>
 <p>Power BI visual analytics monitoring key performance indicators and metrics.</p>
-<iframe width="100%" height="300" src="https://app.powerbi.com/view?r=YOUR_LINK" title="Power BI Dashboard"></iframe>
+<iframe width="100%" height="300" src="https://app.powerbi.com/view?r=YOUR_LINK" title="Power BI Dashboard" style="border:none; margin-top:15px;"></iframe>
 </div>
 
 <div class="project">
 <h3>Medical Revenue Pipeline</h3>
-<p>End-to-end Python, SQLite, and data validation workflow managing secure record ingestion and automated extracts[span_0](start_span)[span_0](end_span).</p>
-<a href="https://github.com/CaldTech/medical-revenue-pipeline" target="_blank">View Repository <i class="fa fa-external-link-alt"></i></a>
+<p>End-to-end Python, SQLite, and data validation workflow managing secure record ingestion and automated extracts.</p>
+<a href="https://github.com/CaldTech/medical-revenue-pipeline" target="_blank" class="btn" style="margin-top:15px; padding:8px 16px; font-size:14px;">View Repository <i class="fa fa-external-link-alt"></i></a>
 </div>
 
 <div class="project">
 <h3>Python Data Pipeline & Automation</h3>
 <p>Automated Python data workflows integrating structured sources for high-speed cleaning, duplicate removal, and reporting.</p>
-<a href="https://github.com/CaldTech" target="_blank">View Code <i class="fa fa-external-link-alt"></i></a>
+<a href="https://github.com/CaldTech" target="_blank" class="btn" style="margin-top:15px; padding:8px 16px; font-size:14px;">View Code <i class="fa fa-external-link-alt"></i></a>
 </div>
 
 </div>
@@ -136,12 +83,30 @@ I am a versatile professional bridging data analytics and tangible craftsmanship
 <section id="skills">
 <h2>Technical & Hands-On Skills</h2>
 <div class="skills-grid">
-<div class="skill"><i class="fa fa-code"></i> Python Automation</div>
-<div class="skill"><i class="fa fa-chart-bar"></i> Power BI Analytics</div>
-<div class="skill"><i class="fa fa-cogs"></i> ETL Pipelines</div>
-<div class="skill"><i class="fa fa-database"></i> SQL & Data Management</div>
-<div class="skill"><i class="fa fa-utensils"></i> Culinary Arts (Chef Joe)</div>
-<div class="skill"><i class="fa fa-hammer"></i> Craftsmanship & Trades</div>
+<div class="skill">
+  <span>Python Automation</span>
+  <div class="skill-bar-container"><div class="skill-bar-fill" data-width="90%"></div></div>
+</div>
+<div class="skill">
+  <span>Power BI Analytics</span>
+  <div class="skill-bar-container"><div class="skill-bar-fill" data-width="85%"></div></div>
+</div>
+<div class="skill">
+  <span>ETL Pipelines</span>
+  <div class="skill-bar-container"><div class="skill-bar-fill" data-width="90%"></div></div>
+</div>
+<div class="skill">
+  <span>SQL & Data Management</span>
+  <div class="skill-bar-container"><div class="skill-bar-fill" data-width="88%"></div></div>
+</div>
+<div class="skill">
+  <span>Culinary Arts (Chef Joe)</span>
+  <div class="skill-bar-container"><div class="skill-bar-fill" data-width="95%"></div></div>
+</div>
+<div class="skill">
+  <span>Craftsmanship & Trades</span>
+  <div class="skill-bar-container"><div class="skill-bar-fill" data-width="85%"></div></div>
+</div>
 </div>
 </section>
 
@@ -149,10 +114,10 @@ I am a versatile professional bridging data analytics and tangible craftsmanship
 <h2>Contact & Connect</h2>
 <p>Email: jordon_calder@outlook.com</p>
 <p>
-<a href="https://github.com/CaldTech" target="_blank"><i class="fab fa-github"></i> GitHub</a> |
-<a href="https://www.linkedin.com/in/jordon-calder-b24b8595/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> |
-<a href="https://youtube.com/@calderofficial" target="_blank"><i class="fab fa-youtube"></i> YouTube</a> |
-<a href="https://tiktok.com/@calderofficial" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+<a href="https://github.com/CaldTech" target="_blank">GitHub</a> |
+<a href="https://www.linkedin.com/in/jordon-calder-b24b8595/" target="_blank">LinkedIn</a> |
+<a href="https://youtube.com/@calderofficial" target="_blank">YouTube</a> |
+<a href="https://tiktok.com/@calderofficial" target="_blank">TikTok</a>
 </p>
 </section>
 
