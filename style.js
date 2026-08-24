@@ -1,4 +1,4 @@
-// Global toggle function in case HTML inline onclick is triggered
+// Global toggle function for mobile menu
 function toggleMenu() {
   let nav = document.getElementById("nav");
   if (nav) {
