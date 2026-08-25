@@ -1,58 +1,93 @@
-// Global toggle function for mobile menu
-function toggleMenu() {
-  let nav = document.getElementById("nav");
-  if (nav) {
-    nav.classList.toggle("active");
-  }
-}
-
-// Function to animate skill progress bars
-function animateSkillBars() {
-  const progressBars = document.querySelectorAll('.skill-bar-fill');
-  progressBars.forEach(bar => {
-    const targetWidth = bar.getAttribute('data-width');
-    if (targetWidth) {
-      bar.style.width = targetWidth;
-    }
-  });
-}
-
-// Initialize triggers when page loads
-document.addEventListener("DOMContentLoaded", function() {
-  // Safe listener fallback for the hamburger button
-  const menuToggle = document.querySelector(".menu-toggle");
-  const nav = document.getElementById("nav");
+// Mobile Navigation Toggle, Skill Filtering, Code Snippet Toggles & Dark Mode
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const nav = document.getElementById('nav');
 
   if (menuToggle && nav) {
-    menuToggle.addEventListener("click", function(e) {
-      e.preventDefault();
-      toggleMenu();
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
     });
 
-    // Close menu automatically when clicking any nav link on mobile
-    const navLinks = nav.querySelectorAll("a");
-    navLinks.forEach(link => {
-      link.addEventListener("click", function() {
-        nav.classList.remove("active");
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('active');
       });
     });
   }
 
-  // Skill progress bars observer & fallback
-  const skillsSection = document.querySelector('#skills');
-  if (skillsSection) {
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          animateSkillBars();
-          observer.unobserve(entry.target);
+  // Animate skill bars on load
+  const skillFills = document.querySelectorAll('.skill-bar-fill');
+  skillFills.forEach(fill => {
+    const targetWidth = fill.getAttribute('data-width');
+    setTimeout(() => {
+      fill.style.width = targetWidth;
+    }, 200);
+  });
+
+  // --- Interactive Skill Filters ---
+  const filterTriggers = document.querySelectorAll('.filter-trigger');
+  const projects = document.querySelectorAll('.project');
+  const resetBtn = document.getElementById('reset-filter');
+
+  filterTriggers.forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const filterValue = trigger.getAttribute('data-filter');
+
+      // Highlight active skill card
+      filterTriggers.forEach(s => s.classList.remove('active-filter'));
+      trigger.classList.add('active-filter');
+
+      // Filter project stack
+      projects.forEach(project => {
+        const categories = project.getAttribute('data-category');
+        if (categories && categories.includes(filterValue)) {
+          project.classList.remove('filtered-out');
+        } else {
+          project.classList.add('filtered-out');
         }
       });
-    }, { threshold: 0.05 });
 
-    observer.observe(skillsSection);
+      if (resetBtn) resetBtn.style.display = 'inline-block';
+    });
+  });
+
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      projects.forEach(project => project.classList.remove('filtered-out'));
+      filterTriggers.forEach(s => s.classList.remove('active-filter'));
+      resetBtn.style.display = 'none';
+    });
   }
-  
-  // Guaranteed fallback: fills progress bars automatically after 800ms
-  setTimeout(animateSkillBars, 800);
+
+  // --- Dark/Light Mode Theme Toggle ---
+  const themeToggleBtn = document.getElementById('theme-toggle');
+  const body = document.body;
+
+  // Check saved theme preference
+  const savedTheme = localStorage.getItem('portfolio_theme');
+  if (savedTheme === 'dark') {
+    body.classList.add('dark-mode');
+    if (themeToggleBtn) themeToggleBtn.innerHTML = '<i class="fa fa-sun"></i>';
+  }
+
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      const isDark = body.classList.contains('dark-mode');
+      
+      if (isDark) {
+        localStorage.setItem('portfolio_theme', 'dark');
+        themeToggleBtn.innerHTML = '<i class="fa fa-sun"></i>';
+      } else {
+        localStorage.setItem('portfolio_theme', 'light');
+        themeToggleBtn.innerHTML = '<i class="fa fa-moon"></i>';
+      }
+    });
+  }
 });
+
+// --- Quick Code Snippet Toggle Function ---
+function toggleSnippet(headerElem) {
+  const box = headerElem.parentElement;
+  box.classList.toggle('active');
+}
