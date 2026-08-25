@@ -1,62 +1,317 @@
-<!-- Services & Pricing Section -->
-<section id="services" class="services-section">
-    <h2>Client Services & Pricing</h2>
-    <p>Professional, mobile-friendly websites designed for local medical centers and practices.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jordon Calder (Chef Joe) | Portfolio & Hub</title>
 
-    <div class="pricing-grid">
-        
-        <!-- Tier 1: Landing Page -->
-        <div class="service-card">
-            <h3>The Local Presence</h3>
-            <p class="price">$400 USD</p>
-            <p>Single-page landing site with hours, map integration, and contact forms.</p>
-            
-            <!-- PayPal Button Container for Landing Page -->
-            <div id="paypal-container-LANDING_BUTTON_ID"></div>
-        </div>
+<!-- Open Graph / WhatsApp Preview Meta Tags -->
+<meta property="og:title" content="Jordon Calder (Chef Joe) | Portfolio & Hub">
+<meta property="og:description" content="Data Automation Specialist, Creator & Craftsman. Explore Python pipelines, hardware tutorials, and Chef Joe's recipes!">
+<meta property="og:image" content="https://CaldTech.github.io/images/profile.jpg">
+<meta property="og:url" content="https://CaldTech.github.io/">
+<meta property="og:type" content="website">
 
-        <!-- Tier 2: Practice Portal -->
-        <div class="service-card">
-            <h3>The Practice Portal</h3>
-            <p class="price">$950 USD</p>
-            <p>Multi-page site (3-5 pages), custom patient intake forms, and full mobile optimization.</p>
-            
-            <!-- PayPal Button Container for Portal -->
-            <div id="paypal-container-PORTAL_BUTTON_ID"></div>
-        </div>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
 
-        <!-- Tier 3: Maintenance Retainer -->
-        <div class="service-card">
-            <h3>Monthly Maintenance</h3>
-            <p class="price">$100 USD / mo</p>
-            <p>Ongoing content updates, security checks, and priority support.</p>
-            
-            <!-- PayPal Button Container for Maintenance -->
-            <div id="paypal-container-MAINTENANCE_BUTTON_ID"></div>
-        </div>
+<header>
+<div class="logo">
+  <a href="index.html" class="logo-link">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 50" class="responsive-logo-svg" style="width: 220px; height: 40px;">
+      <style>
+        .s5-main { font-family: Arial, sans-serif; font-weight: 900; font-size: 16px; fill: currentColor; letter-spacing: 0.5px; }
+        .s5-sub { font-family: Arial, sans-serif; font-weight: 600; font-size: 10px; fill: #0284c7; }
+      </style>
+      <g transform="translate(2, 3)">
+        <rect x="0" y="0" width="40" height="40" rx="10" fill="#0f172a" />
+        <circle cx="20" cy="20" r="14" stroke="#334155" stroke-width="1.5" fill="none" />
+        <path d="M 6 20 L 12 20 M 28 20 L 34 20 M 20 6 L 20 12 M 20 28 L 20 34" stroke="#38bdf8" stroke-width="1.5" />
+        <circle cx="6" cy="20" r="2" fill="#25D366" />
+        <circle cx="34" cy="20" r="2" fill="#25D366" />
+        <text x="8" y="25" font-family="Arial, sans-serif" font-weight="900" font-size="14" fill="#ffffff">JJC</text>
+      </g>
+      <text x="50" y="20" class="s5-main">CaldTech Solutions</text>
+      <text x="50" y="36" class="s5-sub">Hardware &amp; Software Hub</text>
+    </svg>
+  </a>
+</div>
+<nav id="nav">
+<a href="#profile">Profile</a>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#gear">Gear</a>
+<a href="resume.html">Resume</a>
+<a href="#contact">Contact</a>
+</nav>
 
-    </div>
+<div class="header-controls">
+  <!-- Theme Toggle Button -->
+  <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark/Light Mode">
+    <i class="fa fa-moon"></i>
+  </button>
+  <div class="menu-toggle" aria-label="Toggle navigation">
+    <i class="fa fa-bars"></i>
+  </div>
+</div>
+</header>
+
+<!-- Dashboard Profile Header -->
+<section id="profile" class="hero">
+<div class="profile-card">
+<img src="images/profile.jpg" class="hero-img" alt="Jordon Calder Profile">
+<h2>Jordon Calder (Chef Joe)</h2>
+<p class="profile-tagline">Data Automation Specialist, Creator & Craftsman</p>
+
+<div class="profile-badges">
+  <span class="badge data">📊 Data & Risk Analytics</span>
+  <span class="badge chef">🍳 Chef Joe</span>
+  <span class="badge trade">🛠️ Tech & Trades</span>
+</div>
+
+<p class="profile-description">
+Bridging enterprise-level data pipelines, software engineering, and hands-on craftsmanship. Dedicated to building robust systems, clean automation, and practical solutions from scratch.
+</p>
+<div style="display:flex; justify-content:center; gap:10px; flex-wrap:wrap;">
+  <a href="#projects" class="btn">Explore Work</a>
+  <a href="https://paypal.me/JordonCalder" target="_blank" class="btn" style="background: #0070ba;"><i class="fab fa-paypal"></i> Support via PayPal</a>
+</div>
+</div>
 </section>
 
-<!-- Main PayPal SDK Script (Include once per page) -->
-<script 
-  src="https://www.paypal.com/sdk/js?client-id=BAAUnwZrrppO16ipCT8BvS4iUfx70bdo2C6MGSUPHVNk0Da3KgoIoQURQESFWt02ANDfXeB9u3TcQoW4r4&components=hosted-buttons&disable-funding=venmo&currency=USD">
-</script>
+<section id="about">
+<h2>About Me</h2>
+<p>
+I am a versatile professional operating at the intersection of data analytics and tangible craftsmanship. From building automated ETL pipelines and dashboards to cooking signature dishes as Chef Joe, fixing hardware like Samsung screens, and executing hands-on woodworking, CNC engraving, and solar builds, my work focuses on practical problem-solving and building real solutions from the ground up.
+</p>
+</section>
 
-<!-- PayPal Button Render Script -->
-<script>
-  // Render Landing Page Button
-  paypal.HostedButtons({
-    hostedButtonId: "LANDING_BUTTON_ID", // Replace with your actual PayPal hosted button ID for Landing
-  }).render("#paypal-container-LANDING_BUTTON_ID");
+<section id="projects">
+<h2>Featured Projects & Media</h2>
+<p style="text-align: center; font-size: 13px; color: #64748b; margin-top: -10px; margin-bottom: 20px;">Click any skill below to filter projects instantly!</p>
+<div class="projects-stack">
 
-  // Render Practice Portal Button
-  paypal.HostedButtons({
-    hostedButtonId: "PORTAL_BUTTON_ID", // Replace with your actual PayPal hosted button ID for Portal
-  }).render("#paypal-container-PORTAL_BUTTON_ID");
+<!-- Medical Data Automation Pipeline (Expanded Floating Icons) -->
+<div class="project medical-card" data-category="python etl sql">
+<div class="bg-animation">
+  <i class="fa fa-heartbeat float-icon icon-1"></i>
+  <i class="fa fa-syringe float-icon icon-2"></i>
+  <i class="fa fa-stethoscope float-icon icon-3"></i>
+  <i class="fa fa-notes-medical float-icon icon-4"></i>
+  <i class="fa fa-pills float-icon icon-5"></i>
+  <i class="fa fa-laptop-medical float-icon icon-6"></i>
+  <i class="fa fa-database float-icon icon-7"></i>
+  <i class="fa fa-file-excel float-icon icon-8"></i>
+  <i class="fa fa-chart-line float-icon icon-9"></i>
+  <i class="fa fa-shield-alt float-icon icon-10"></i>
+</div>
+<div class="project-content-inner">
+  <h3>Medical Revenue Data Pipeline & Automation</h3>
+  <p>End-to-end Python, SQLite, and data validation workflow managing secure record ingestion and automated extracts. Watch the 60-second workflow breakdown!</p>
+  <div style="margin-top: 15px;">
+    <iframe width="100%" height="280" src="https://www.youtube.com/embed/ulhOsd90g2Y?autoplay=1&mute=1" title="Medical Automation Workflow Short" style="border:none; border-radius:8px;" allow="autoplay" allowfullscreen></iframe>
+  </div>
 
-  // Render Maintenance Button
-  paypal.HostedButtons({
-    hostedButtonId: "MAINTENANCE_BUTTON_ID", // Replace with your actual PayPal hosted button ID for Maintenance
-  }).render("#paypal-container-MAINTENANCE_BUTTON_ID");
-</script>
+  <!-- Structured Scrollable Code Snippet Drawer -->
+  <div class="code-snippet-box">
+    <div class="snippet-header" onclick="toggleSnippet(this)">
+      <span><i class="fa fa-code"></i> Quick Snippet: SQLite Ingestion Function</span>
+      <i class="fa fa-chevron-down arrow-icon"></i>
+    </div>
+    <div class="snippet-scroll-pane">
+      <div class="snippet-body">
+        <pre><code>import sqlite3
+import pandas as pd
+
+def ingest_medical_data(csv_path, db_name="revenue.db"):
+    conn = sqlite3.connect(db_name)
+    df = pd.read_csv(csv_path)
+    df.to_sql("medical_records", conn, if_exists="append", index=False)
+    conn.close()
+    print("Ingestion complete!")</code></pre>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-actions centered-actions">
+    <a href="https://github.com/CaldTech/medical-revenue-pipeline" target="_blank" class="btn"><i class="fab fa-github"></i> View Code</a>
+    <a href="https://youtube.com/shorts/ulhOsd90g2Y" target="_blank" class="btn btn-youtube icon-only"><i class="fab fa-youtube"></i></a>
+    <a href="https://vt.tiktok.com/ZSVQbEp7R/" target="_blank" class="btn btn-tiktok icon-only"><i class="fab fa-tiktok"></i></a>
+  </div>
+</div>
+</div>
+
+<!-- Samsung Screen Repair Tutorial (Expanded Floating Icons) -->
+<div class="project tech-card" data-category="craft">
+<div class="bg-animation">
+  <i class="fa fa-code float-icon icon-1"></i>
+  <i class="fa fa-book float-icon icon-2"></i>
+  <i class="fa fa-terminal float-icon icon-3"></i>
+  <i class="fa fa-microchip float-icon icon-4"></i>
+  <i class="fa fa-laptop-code float-icon icon-5"></i>
+  <i class="fa fa-database float-icon icon-6"></i>
+  <i class="fa fa-tools float-icon icon-7"></i>
+  <i class="fa fa-hammer float-icon icon-8"></i>
+  <i class="fa fa-bolt float-icon icon-9"></i>
+  <i class="fa fa-cog float-icon icon-10"></i>
+</div>
+<div class="project-content-inner">
+  <h3>Samsung Tablet Screen Repair & Hardware Restoration</h3>
+  <p>Technical repair walkthrough showcasing precision troubleshooting, display panel replacement, and protective case installation to prevent future impact damage.</p>
+  <div style="margin-top: 15px;">
+    <iframe width="100%" height="250" src="https://www.youtube.com/embed/LqaYXnnREUw?autoplay=1&mute=1" title="Samsung Repair Tutorial" style="border:none; border-radius:8px;" allow="autoplay" allowfullscreen></iframe>
+  </div>
+
+  <!-- Structured Scrollable Code Snippet Drawer -->
+  <div class="code-snippet-box">
+    <div class="snippet-header" onclick="toggleSnippet(this)">
+      <span><i class="fa fa-terminal"></i> Quick Snippet: Pydroid Test Routine</span>
+      <i class="fa fa-chevron-down arrow-icon"></i>
+    </div>
+    <div class="snippet-scroll-pane">
+      <div class="snippet-body">
+        <pre><code># Mobile diagnostic check loop
+import os
+def check_environment():
+    print(f"Running in Android / Termux: {os.name}")
+check_environment()</code></pre>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-actions centered-actions">
+    <a href="https://www.youtube.com/watch?v=LqaYXnnREUw" target="_blank" class="btn btn-youtube icon-only"><i class="fab fa-youtube"></i></a>
+    <a href="https://vt.tiktok.com/ZSVQQkL72/" target="_blank" class="btn btn-tiktok icon-only"><i class="fab fa-tiktok"></i></a>
+  </div>
+</div>
+</div>
+
+<!-- Chef Joe: Banana Fritters (Expanded Floating Icons) -->
+<div class="project culinary-card" data-category="chef">
+<div class="bg-animation">
+  <i class="fa fa-utensils float-icon icon-1"></i>
+  <i class="fa fa-blender float-icon icon-2"></i>
+  <i class="fa fa-pepper-hot float-icon icon-3"></i>
+  <i class="fa fa-bowl-food float-icon icon-4"></i>
+  <i class="fa fa-mug-hot float-icon icon-5"></i>
+  <i class="fa fa-lemon float-icon icon-6"></i>
+  <i class="fa fa-carrot float-icon icon-7"></i>
+  <i class="fa fa-apple-alt float-icon icon-8"></i>
+  <i class="fa fa-fire float-icon icon-9"></i>
+  <i class="fa fa-concierge-bell float-icon icon-10"></i>
+</div>
+<div class="project-content-inner">
+  <h3>BANANA FRITTERS // Don't throw out overripe bananas 🍌</h3>
+  <p>What do you do with overripe bananas? Make banana fritters! A quick, vegetarian recipe using minimal ingredients for a fast snack.</p>
+  <div style="margin-top: 15px;">
+    <iframe width="100%" height="250" src="https://www.youtube.com/embed/_8lP6NOHxSI?autoplay=1&mute=1" title="Banana Fritters Recipe" style="border:none; border-radius:8px;" allow="autoplay" allowfullscreen></iframe>
+  </div>
+  <div class="project-actions centered-actions">
+    <a href="https://youtube.com/shorts/_8lP6NOHxSI" target="_blank" class="btn btn-youtube icon-only"><i class="fab fa-youtube"></i></a>
+  </div>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- Interactive Skills Section -->
+<section id="skills">
+<h2>Technical & Hands-On Skills</h2>
+<p style="text-align: center; font-size: 13px; color: #64748b; margin-top: -10px; margin-bottom: 20px;">Click any skill card to filter projects above!</p>
+<div class="skills-grid">
+<div class="skill filter-trigger" data-filter="python">
+  <div style="display:flex; justify-content:space-between; margin-bottom:5px;">
+    <span>Python Automation</span>
+    <span style="font-size:12px; color:#666;">82%</span>
+  </div>
+  <div class="skill-bar-container"><div class="skill-bar-fill" data-width="82%"></div></div>
+</div>
+<div class="skill filter-trigger" data-filter="etl">
+  <div style="display:flex; justify-content:space-between; margin-bottom:5px;">
+    <span>ETL Pipelines</span>
+    <span style="font-size:12px; color:#666;">78%</span>
+  </div>
+  <div class="skill-bar-container"><div class="skill-bar-fill" data-width="78%"></div></div>
+</div>
+<div class="skill filter-trigger" data-filter="sql">
+  <div style="display:flex; justify-content:space-between; margin-bottom:5px;">
+    <span>SQL & Data Management</span>
+    <span style="font-size:12px; color:#666;">75%</span>
+  </div>
+  <div class="skill-bar-container"><div class="skill-bar-fill" data-width="75%"></div></div>
+</div>
+<div class="skill filter-trigger" data-filter="chef">
+  <div style="display:flex; justify-content:space-between; margin-bottom:5px;">
+    <span>Culinary Arts (Chef Joe)</span>
+    <span style="font-size:12px; color:#666;">84%</span>
+  </div>
+  <div class="skill-bar-container"><div class="skill-bar-fill" data-width="84%"></div></div>
+</div>
+<div class="skill filter-trigger" data-filter="craft">
+  <div style="display:flex; justify-content:space-between; margin-bottom:5px;">
+    <span>Craftsmanship & Trades</span>
+    <span style="font-size:12px; color:#666;">72%</span>
+  </div>
+  <div class="skill-bar-container"><div class="skill-bar-fill" data-width="72%"></div></div>
+</div>
+</div>
+<div style="text-align:center; margin-top: 15px;">
+  <button id="reset-filter" class="btn" style="background:#64748b; font-size:12px; padding:6px 14px; display:none;">Show All Projects</button>
+</div>
+</section>
+
+<!-- Gear & Tools Workshop Section -->
+<section id="gear" style="background: rgba(0,0,0,0.02);">
+<h2>My Workshop & Tech Stack</h2>
+<p style="text-align: center; color: #64748b; max-width: 600px; margin: 0 auto 30px auto; font-size: 14px;">
+The digital software and physical trade equipment used to engineer data solutions and build custom crafts.
+</p>
+<div class="skills-grid">
+  <div class="skill">
+    <h3 style="font-size: 16px; color: #2563eb; margin-top:0;"><i class="fa fa-laptop-code"></i> Digital Stack</h3>
+    <ul style="margin: 0; padding-left: 18px; font-size: 14px; color: #475569; line-height: 1.6;">
+      <li>Python & Power Automate</li>
+      <li>Power BI & Audit Pipelines</li>
+      <li>GitHub Pages & Web Dev</li>
+      <li>Samsung Tab S6 Lite (Mobile Dev)</li>
+    </ul>
+  </div>
+  <div class="skill">
+    <h3 style="font-size: 16px; color: #16a34a; margin-top:0;"><i class="fa fa-tools"></i> Workshop Hardware</h3>
+    <ul style="margin: 0; padding-left: 18px; font-size: 14px; color: #475569; line-height: 1.6;">
+      <li>3018 CNC Laser & Engraver Combo</li>
+      <li>Circular Saw & Pallet Breakdown Tools</li>
+      <li>Precision Electronics Repair Kit</li>
+      <li>Split-Phase Solar Kit Setup</li>
+    </ul>
+  </div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact & Connect</h2>
+<p>Email: jordon_calder@outlook.com</p>
+<p>
+<a href="https://github.com/CaldTech" target="_blank">GitHub</a> |
+<a href="https://www.linkedin.com/in/jordon-calder-b24b8595/" target="_blank">LinkedIn</a> |
+<a href="https://youtube.com/@calderofficial" target="_blank">YouTube</a> |
+<a href="https://tiktok.com/@calderofficial" target="_blank">TikTok</a> |
+<a href="https://paypal.me/JordonCalder" target="_blank" style="color: #0070ba; font-weight: bold;"><i class="fab fa-paypal"></i> PayPal Tip</a>
+</p>
+</section>
+
+<a href="https://wa.me/18768532705" class="whatsapp" target="_blank" aria-label="WhatsApp Chat">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<footer>
+<p>© 2026 Jordon Calder (Chef Joe). All rights reserved.</p>
+</footer>
+
+<script src="style.js"></script>
+</body>
+</html>
