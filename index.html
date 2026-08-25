@@ -19,20 +19,20 @@
 
 <header>
 <div class="logo">
-  <a href="index.html" style="text-decoration:none; display:flex; align-items:center;">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 50" width="180" height="40">
+  <a href="index.html" class="logo-link">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 50" class="responsive-logo-svg">
       <style>
-        .logo-text { font-family: Arial, sans-serif; font-weight: 700; font-size: 20px; fill: currentColor; }
-        .logo-sub { font-family: Arial, sans-serif; font-weight: 600; font-size: 14px; fill: #2563eb; }
+        .logo-text { font-family: Arial, sans-serif; font-weight: 700; font-size: 18px; fill: currentColor; }
+        .logo-sub { font-family: Arial, sans-serif; font-weight: 600; font-size: 12px; fill: #2563eb; }
         .node-dot { fill: #25D366; }
       </style>
-      <g transform="translate(2, 2)">
-        <rect x="0" y="0" width="36" height="36" rx="8" fill="#1e293b" />
-        <circle cx="28" cy="8" r="3" class="node-dot" />
-        <text x="7" y="25" font-family="Arial, sans-serif" font-weight="900" font-size="18" fill="#ffffff">JC</text>
+      <g transform="translate(2, 5)">
+        <rect x="0" y="0" width="32" height="32" rx="6" fill="#1e293b" />
+        <circle cx="26" cy="6" r="2.5" class="node-dot" />
+        <text x="6" y="22" font-family="Arial, sans-serif" font-weight="900" font-size="16" fill="#ffffff">JC</text>
       </g>
-      <text x="48" y="22" class="logo-text">Jordon Calder</text>
-      <text x="48" y="38" class="logo-sub">CaldTech Hub</text>
+      <text x="42" y="20" class="logo-text">Jordon Calder</text>
+      <text x="42" y="36" class="logo-sub">CaldTech Hub</text>
     </svg>
   </a>
 </div>
@@ -109,14 +109,15 @@ I am a versatile professional operating at the intersection of data analytics an
     <iframe width="100%" height="280" src="https://www.youtube.com/embed/ulhOsd90g2Y?autoplay=1&mute=1" title="Medical Automation Workflow Short" style="border:none; border-radius:8px;" allow="autoplay" allowfullscreen></iframe>
   </div>
 
-  <!-- Quick Code Snippet Drawer -->
+  <!-- Structured Scrollable Code Snippet Drawer -->
   <div class="code-snippet-box">
     <div class="snippet-header" onclick="toggleSnippet(this)">
       <span><i class="fa fa-code"></i> Quick Snippet: SQLite Ingestion Function</span>
       <i class="fa fa-chevron-down arrow-icon"></i>
     </div>
-    <div class="snippet-body">
-      <pre><code>import sqlite3
+    <div class="snippet-scroll-pane">
+      <div class="snippet-body">
+        <pre><code>import sqlite3
 import pandas as pd
 
 def ingest_medical_data(csv_path, db_name="revenue.db"):
@@ -125,6 +126,7 @@ def ingest_medical_data(csv_path, db_name="revenue.db"):
     df.to_sql("medical_records", conn, if_exists="append", index=False)
     conn.close()
     print("Ingestion complete!")</code></pre>
+      </div>
     </div>
   </div>
 
@@ -153,18 +155,20 @@ def ingest_medical_data(csv_path, db_name="revenue.db"):
     <iframe width="100%" height="250" src="https://www.youtube.com/embed/LqaYXnnREUw?autoplay=1&mute=1" title="Samsung Repair Tutorial" style="border:none; border-radius:8px;" allow="autoplay" allowfullscreen></iframe>
   </div>
 
-  <!-- Quick Code Snippet Drawer -->
+  <!-- Structured Scrollable Code Snippet Drawer -->
   <div class="code-snippet-box">
     <div class="snippet-header" onclick="toggleSnippet(this)">
       <span><i class="fa fa-terminal"></i> Quick Snippet: Pydroid Test Routine</span>
       <i class="fa fa-chevron-down arrow-icon"></i>
     </div>
-    <div class="snippet-body">
-      <pre><code># Mobile diagnostic check loop
+    <div class="snippet-scroll-pane">
+      <div class="snippet-body">
+        <pre><code># Mobile diagnostic check loop
 import os
 def check_environment():
     print(f"Running in Android / Termux: {os.name}")
 check_environment()</code></pre>
+      </div>
     </div>
   </div>
 
