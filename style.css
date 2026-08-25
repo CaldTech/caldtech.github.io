@@ -249,9 +249,7 @@ footer{
   }
 }
 
-/* --- Appended Features: Centered Actions & Animated Backgrounds --- */
-
-/* Centered Project Action Buttons */
+/* --- Centered Action Buttons --- */
 .centered-actions {
   display: flex;
   justify-content: center;
@@ -259,7 +257,6 @@ footer{
   gap: 12px;
 }
 
-/* Icon-only square buttons */
 .btn.icon-only {
   width: 42px;
   height: 42px;
@@ -272,7 +269,7 @@ footer{
   margin-left: 0;
 }
 
-/* Feature Background Animations */
+/* --- Spanning Floating Background Animation Styles --- */
 .project {
   position: relative;
   overflow: hidden;
@@ -282,61 +279,59 @@ footer{
 .project-content-inner {
   position: relative;
   z-index: 2;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.94);
   padding: 20px;
   border-radius: 8px;
 }
 
-/* Tech / Data Card Animation (Subtle moving grid lines) */
-.tech-card {
-  background: #eff6ff;
-  border: 1px solid #bfdbfe;
-}
-.tech-bg-animation {
+/* Card Themes */
+.medical-card { background: #f0fdf4; border: 1px solid #bbf7d0; }
+.tech-card { background: #eff6ff; border: 1px solid #bfdbfe; }
+.culinary-card { background: #fffbeb; border: 1px solid #fde68a; }
+
+/* Background Container spanning across the entire card */
+.bg-animation {
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-image: linear-gradient(90deg, rgba(37,99,235,0.05) 1px, transparent 1px),
-                    linear-gradient(0deg, rgba(37,99,235,0.05) 1px, transparent 1px);
-  background-size: 20px 20px;
-  animation: techGridMove 20s linear infinite;
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
   z-index: 0;
-}
-@keyframes techGridMove {
-  0% { background-position: 0 0; }
-  100% { background-position: 40px 40px; }
+  overflow: hidden;
 }
 
-/* Hardware / Repair Card Animation (Subtle tech pulse) */
-.hardware-card {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-}
-.hardware-bg-animation {
+/* Floating Icon Styles & Spanning Animations */
+.float-icon {
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: radial-gradient(circle, rgba(148,163,184,0.15) 10%, transparent 10%);
-  background-size: 30px 30px;
-  animation: hardwarePulse 10s ease-in-out infinite alternate;
-  z-index: 0;
-}
-@keyframes hardwarePulse {
-  0% { opacity: 0.3; transform: scale(1); }
-  100% { opacity: 0.7; transform: scale(1.05); }
+  font-size: 24px;
+  opacity: 0.18;
+  animation: floatAcross 12s linear infinite;
 }
 
-/* Culinary / Kitchen Card Animation (Warm subtle gradient pulse) */
-.culinary-card {
-  background: #fffbeb;
-  border: 1px solid #fde68a;
-}
-.culinary-bg-animation {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(135deg, rgba(245,158,11,0.08) 0%, rgba(252,211,77,0.02) 100%);
-  animation: culinaryWave 8s ease-in-out infinite alternate;
-  z-index: 0;
-}
-@keyframes culinaryWave {
-  0% { filter: hue-rotate(0deg); }
-  100% { filter: hue-rotate(15deg); }
+/* Medical Card Colors & Positions */
+.medical-card .float-icon { color: #16a34a; }
+/* Tech Card Colors & Positions */
+.tech-card .float-icon { color: #2563eb; }
+/* Culinary Card Colors & Positions */
+.culinary-card .float-icon { color: #d97706; }
+
+/* Staggering individual icons across the card width and height */
+.float-icon.icon-1 { top: 15%; left: -10%; animation-duration: 14s; animation-delay: 0s; }
+.float-icon.icon-2 { top: 65%; left: -10%; animation-duration: 10s; animation-delay: 3s; font-size: 28px; }
+.float-icon.icon-3 { top: 35%; left: -10%; animation-duration: 16s; animation-delay: 6s; font-size: 20px; }
+.float-icon.icon-4 { top: 80%; left: -10%; animation-duration: 11s; animation-delay: 1.5s; font-size: 26px; }
+
+@keyframes floatAcross {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateX(55vw) translateY(-15px) rotate(180deg);
+  }
+  100% {
+    transform: translateX(110vw) translateY(0) rotate(360deg);
+  }
 }
