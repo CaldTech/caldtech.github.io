@@ -114,12 +114,10 @@ nav a{
 
 .btn-youtube {
   background: #ff0000;
-  margin-left: 8px;
 }
 
 .btn-tiktok {
   background: #000000;
-  margin-left: 8px;
 }
 
 section{
@@ -173,14 +171,13 @@ section{
 }
 
 .skill-bar-fill {
-  background: #7c3aed; /* Vibrant Purple */
+  background: #7c3aed; 
   height: 100%;
   width: 0%;
   transition: width 1.2s ease-in-out;
   border-radius: 6px;
 }
 
-/* Alternating subtle shade variation */
 .skill:nth-child(even) .skill-bar-fill {
   background: #9333ea; 
 }
@@ -250,4 +247,96 @@ footer{
   .menu-toggle {
     display: block;
   }
+}
+
+/* --- Appended Features: Centered Actions & Animated Backgrounds --- */
+
+/* Centered Project Action Buttons */
+.centered-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Icon-only square buttons */
+.btn.icon-only {
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  font-size: 18px;
+  margin-left: 0;
+}
+
+/* Feature Background Animations */
+.project {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.project-content-inner {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Tech / Data Card Animation (Subtle moving grid lines) */
+.tech-card {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+}
+.tech-bg-animation {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: linear-gradient(90deg, rgba(37,99,235,0.05) 1px, transparent 1px),
+                    linear-gradient(0deg, rgba(37,99,235,0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+  animation: techGridMove 20s linear infinite;
+  z-index: 0;
+}
+@keyframes techGridMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 40px 40px; }
+}
+
+/* Hardware / Repair Card Animation (Subtle tech pulse) */
+.hardware-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+.hardware-bg-animation {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle, rgba(148,163,184,0.15) 10%, transparent 10%);
+  background-size: 30px 30px;
+  animation: hardwarePulse 10s ease-in-out infinite alternate;
+  z-index: 0;
+}
+@keyframes hardwarePulse {
+  0% { opacity: 0.3; transform: scale(1); }
+  100% { opacity: 0.7; transform: scale(1.05); }
+}
+
+/* Culinary / Kitchen Card Animation (Warm subtle gradient pulse) */
+.culinary-card {
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+}
+.culinary-bg-animation {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, rgba(245,158,11,0.08) 0%, rgba(252,211,77,0.02) 100%);
+  animation: culinaryWave 8s ease-in-out infinite alternate;
+  z-index: 0;
+}
+@keyframes culinaryWave {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(15deg); }
 }
