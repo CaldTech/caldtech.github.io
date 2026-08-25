@@ -22,7 +22,7 @@
   <a href="index.html" style="text-decoration:none; display:flex; align-items:center;">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 50" width="180" height="40">
       <style>
-        .logo-text { font-family: Arial, sans-serif; font-weight: 700; font-size: 20px; fill: #1e293b; }
+        .logo-text { font-family: Arial, sans-serif; font-weight: 700; font-size: 20px; fill: currentColor; }
         .logo-sub { font-family: Arial, sans-serif; font-weight: 600; font-size: 14px; fill: #2563eb; }
         .node-dot { fill: #25D366; }
       </style>
@@ -41,11 +41,19 @@
 <a href="#about">About</a>
 <a href="#projects">Projects</a>
 <a href="#skills">Skills</a>
+<a href="#gear">Gear</a>
 <a href="resume.html">Resume</a>
 <a href="#contact">Contact</a>
 </nav>
-<div class="menu-toggle" aria-label="Toggle navigation">
-<i class="fa fa-bars"></i>
+
+<div class="header-controls">
+  <!-- Theme Toggle Button -->
+  <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark/Light Mode">
+    <i class="fa fa-moon"></i>
+  </button>
+  <div class="menu-toggle" aria-label="Toggle navigation">
+    <i class="fa fa-bars"></i>
+  </div>
 </div>
 </header>
 
@@ -67,7 +75,6 @@ Bridging enterprise-level data pipelines, software engineering, and hands-on cra
 </p>
 <div style="display:flex; justify-content:center; gap:10px; flex-wrap:wrap;">
   <a href="#projects" class="btn">Explore Work</a>
-  <!-- PayPal Donation Button -->
   <a href="https://paypal.me/JordonCalder" target="_blank" class="btn" style="background: #0070ba;"><i class="fab fa-paypal"></i> Support via PayPal</a>
 </div>
 </div>
@@ -82,10 +89,11 @@ I am a versatile professional operating at the intersection of data analytics an
 
 <section id="projects">
 <h2>Featured Projects & Media</h2>
+<p style="text-align: center; font-size: 13px; color: #64748b; margin-top: -10px; margin-bottom: 20px;">Click any skill below to filter projects instantly!</p>
 <div class="projects-stack">
 
-<!-- Medical Data Automation Pipeline (Medical Floating BG) -->
-<div class="project medical-card">
+<!-- Medical Data Automation Pipeline -->
+<div class="project medical-card" data-category="python etl sql">
 <div class="bg-animation">
   <i class="fa fa-heartbeat float-icon icon-1"></i>
   <i class="fa fa-syringe float-icon icon-2"></i>
@@ -100,6 +108,26 @@ I am a versatile professional operating at the intersection of data analytics an
   <div style="margin-top: 15px;">
     <iframe width="100%" height="280" src="https://www.youtube.com/embed/ulhOsd90g2Y?autoplay=1&mute=1" title="Medical Automation Workflow Short" style="border:none; border-radius:8px;" allow="autoplay" allowfullscreen></iframe>
   </div>
+
+  <!-- Quick Code Snippet Drawer -->
+  <div class="code-snippet-box">
+    <div class="snippet-header" onclick="toggleSnippet(this)">
+      <span><i class="fa fa-code"></i> Quick Snippet: SQLite Ingestion Function</span>
+      <i class="fa fa-chevron-down arrow-icon"></i>
+    </div>
+    <div class="snippet-body">
+      <pre><code>import sqlite3
+import pandas as pd
+
+def ingest_medical_data(csv_path, db_name="revenue.db"):
+    conn = sqlite3.connect(db_name)
+    df = pd.read_csv(csv_path)
+    df.to_sql("medical_records", conn, if_exists="append", index=False)
+    conn.close()
+    print("Ingestion complete!")</code></pre>
+    </div>
+  </div>
+
   <div class="project-actions centered-actions">
     <a href="https://github.com/CaldTech/medical-revenue-pipeline" target="_blank" class="btn"><i class="fab fa-github"></i> View Code</a>
     <a href="https://youtube.com/shorts/ulhOsd90g2Y" target="_blank" class="btn btn-youtube icon-only"><i class="fab fa-youtube"></i></a>
@@ -108,8 +136,8 @@ I am a versatile professional operating at the intersection of data analytics an
 </div>
 </div>
 
-<!-- Samsung Screen Repair Tutorial (Tech Floating BG) -->
-<div class="project tech-card">
+<!-- Samsung Screen Repair Tutorial -->
+<div class="project tech-card" data-category="craft">
 <div class="bg-animation">
   <i class="fa fa-code float-icon icon-1"></i>
   <i class="fa fa-book float-icon icon-2"></i>
@@ -124,6 +152,22 @@ I am a versatile professional operating at the intersection of data analytics an
   <div style="margin-top: 15px;">
     <iframe width="100%" height="250" src="https://www.youtube.com/embed/LqaYXnnREUw?autoplay=1&mute=1" title="Samsung Repair Tutorial" style="border:none; border-radius:8px;" allow="autoplay" allowfullscreen></iframe>
   </div>
+
+  <!-- Quick Code Snippet Drawer -->
+  <div class="code-snippet-box">
+    <div class="snippet-header" onclick="toggleSnippet(this)">
+      <span><i class="fa fa-terminal"></i> Quick Snippet: Pydroid Test Routine</span>
+      <i class="fa fa-chevron-down arrow-icon"></i>
+    </div>
+    <div class="snippet-body">
+      <pre><code># Mobile diagnostic check loop
+import os
+def check_environment():
+    print(f"Running in Android / Termux: {os.name}")
+check_environment()</code></pre>
+    </div>
+  </div>
+
   <div class="project-actions centered-actions">
     <a href="https://www.youtube.com/watch?v=LqaYXnnREUw" target="_blank" class="btn btn-youtube icon-only"><i class="fab fa-youtube"></i></a>
     <a href="https://vt.tiktok.com/ZSVQQkL72/" target="_blank" class="btn btn-tiktok icon-only"><i class="fab fa-tiktok"></i></a>
@@ -131,8 +175,8 @@ I am a versatile professional operating at the intersection of data analytics an
 </div>
 </div>
 
-<!-- Chef Joe: Banana Fritters (Culinary Floating BG) -->
-<div class="project culinary-card">
+<!-- Chef Joe: Banana Fritters -->
+<div class="project culinary-card" data-category="chef">
 <div class="bg-animation">
   <i class="fa fa-utensils float-icon icon-1"></i>
   <i class="fa fa-blender float-icon icon-2"></i>
@@ -156,44 +200,77 @@ I am a versatile professional operating at the intersection of data analytics an
 </div>
 </section>
 
+<!-- Interactive Skills Section -->
 <section id="skills">
 <h2>Technical & Hands-On Skills</h2>
+<p style="text-align: center; font-size: 13px; color: #64748b; margin-top: -10px; margin-bottom: 20px;">Click any skill card to filter projects above!</p>
 <div class="skills-grid">
-<div class="skill">
+<div class="skill filter-trigger" data-filter="python">
   <div style="display:flex; justify-content:space-between; margin-bottom:5px;">
     <span>Python Automation</span>
     <span style="font-size:12px; color:#666;">82%</span>
   </div>
   <div class="skill-bar-container"><div class="skill-bar-fill" data-width="82%"></div></div>
 </div>
-<div class="skill">
+<div class="skill filter-trigger" data-filter="etl">
   <div style="display:flex; justify-content:space-between; margin-bottom:5px;">
     <span>ETL Pipelines</span>
     <span style="font-size:12px; color:#666;">78%</span>
   </div>
   <div class="skill-bar-container"><div class="skill-bar-fill" data-width="78%"></div></div>
 </div>
-<div class="skill">
+<div class="skill filter-trigger" data-filter="sql">
   <div style="display:flex; justify-content:space-between; margin-bottom:5px;">
     <span>SQL & Data Management</span>
     <span style="font-size:12px; color:#666;">75%</span>
   </div>
   <div class="skill-bar-container"><div class="skill-bar-fill" data-width="75%"></div></div>
 </div>
-<div class="skill">
+<div class="skill filter-trigger" data-filter="chef">
   <div style="display:flex; justify-content:space-between; margin-bottom:5px;">
     <span>Culinary Arts (Chef Joe)</span>
     <span style="font-size:12px; color:#666;">84%</span>
   </div>
   <div class="skill-bar-container"><div class="skill-bar-fill" data-width="84%"></div></div>
 </div>
-<div class="skill">
+<div class="skill filter-trigger" data-filter="craft">
   <div style="display:flex; justify-content:space-between; margin-bottom:5px;">
     <span>Craftsmanship & Trades</span>
     <span style="font-size:12px; color:#666;">72%</span>
   </div>
   <div class="skill-bar-container"><div class="skill-bar-fill" data-width="72%"></div></div>
 </div>
+</div>
+<div style="text-align:center; margin-top: 15px;">
+  <button id="reset-filter" class="btn" style="background:#64748b; font-size:12px; padding:6px 14px; display:none;">Show All Projects</button>
+</div>
+</section>
+
+<!-- Gear & Tools Workshop Section -->
+<section id="gear" style="background: rgba(0,0,0,0.02);">
+<h2>My Workshop & Tech Stack</h2>
+<p style="text-align: center; color: #64748b; max-width: 600px; margin: 0 auto 30px auto; font-size: 14px;">
+The digital software and physical trade equipment used to engineer data solutions and build custom crafts.
+</p>
+<div class="skills-grid">
+  <div class="skill">
+    <h3 style="font-size: 16px; color: #2563eb; margin-top:0;"><i class="fa fa-laptop-code"></i> Digital Stack</h3>
+    <ul style="margin: 0; padding-left: 18px; font-size: 14px; color: #475569; line-height: 1.6;">
+      <li>Python & Power Automate</li>
+      <li>Power BI & Audit Pipelines</li>
+      <li>GitHub Pages & Web Dev</li>
+      <li>Samsung Tab S6 Lite (Mobile Dev)</li>
+    </ul>
+  </div>
+  <div class="skill">
+    <h3 style="font-size: 16px; color: #16a34a; margin-top:0;"><i class="fa fa-tools"></i> Workshop Hardware</h3>
+    <ul style="margin: 0; padding-left: 18px; font-size: 14px; color: #475569; line-height: 1.6;">
+      <li>3018 CNC Laser & Engraver Combo</li>
+      <li>Circular Saw & Pallet Breakdown Tools</li>
+      <li>Precision Electronics Repair Kit</li>
+      <li>Split-Phase Solar Kit Setup</li>
+    </ul>
+  </div>
 </div>
 </section>
 
