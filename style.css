@@ -134,10 +134,21 @@ section{
 }
 
 .project{
+  position: relative;
+  overflow: hidden;
   background: white;
   padding: 25px;
-  border-radius: 10px;
+  border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  z-index: 1;
+}
+
+.project-content-inner {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 20px;
+  border-radius: 8px;
 }
 
 .project-actions {
@@ -269,33 +280,15 @@ footer{
   margin-left: 0;
 }
 
-/* --- Spanning Floating Background Animation Styles --- */
-.project {
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
+/* --- Full-Background Spanning Floating Animation Engine --- */
+.medical-card { background: #f0fdf4; }
+.tech-card { background: #eff6ff; }
+.culinary-card { background: #fffbeb; }
 
-.project-content-inner {
-  position: relative;
-  z-index: 2;
-  background: rgba(255, 255, 255, 0.94);
-  padding: 20px;
-  border-radius: 8px;
-}
-
-/* Card Themes */
-.medical-card { background: #f0fdf4; border: 1px solid #bbf7d0; }
-.tech-card { background: #eff6ff; border: 1px solid #bfdbfe; }
-.culinary-card { background: #fffbeb; border: 1px solid #fde68a; }
-
-/* Background Container spanning across the entire card */
 .bg-animation {
   position: absolute;
-  top: 0; 
-  left: 0; 
-  right: 0; 
-  bottom: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   pointer-events: none;
@@ -303,35 +296,37 @@ footer{
   overflow: hidden;
 }
 
-/* Floating Icon Styles & Spanning Animations */
 .float-icon {
   position: absolute;
-  font-size: 24px;
-  opacity: 0.18;
-  animation: floatAcross 12s linear infinite;
+  font-size: 22px;
+  opacity: 0.22;
+  animation: floatRandomly 14s linear infinite;
 }
 
-/* Medical Card Colors & Positions */
+/* Card-Specific Icon Tints */
 .medical-card .float-icon { color: #16a34a; }
-/* Tech Card Colors & Positions */
 .tech-card .float-icon { color: #2563eb; }
-/* Culinary Card Colors & Positions */
 .culinary-card .float-icon { color: #d97706; }
 
-/* Staggering individual icons across the card width and height */
-.float-icon.icon-1 { top: 15%; left: -10%; animation-duration: 14s; animation-delay: 0s; }
-.float-icon.icon-2 { top: 65%; left: -10%; animation-duration: 10s; animation-delay: 3s; font-size: 28px; }
-.float-icon.icon-3 { top: 35%; left: -10%; animation-duration: 16s; animation-delay: 6s; font-size: 20px; }
-.float-icon.icon-4 { top: 80%; left: -10%; animation-duration: 11s; animation-delay: 1.5s; font-size: 26px; }
+/* Distribute across the entire background canvas area */
+.float-icon.icon-1 { top: 10%; left: 5%; animation-duration: 12s; animation-delay: 0s; }
+.float-icon.icon-2 { top: 75%; left: 20%; animation-duration: 16s; animation-delay: 2s; font-size: 26px; }
+.float-icon.icon-3 { top: 40%; left: 50%; animation-duration: 10s; animation-delay: 5s; font-size: 20px; }
+.float-icon.icon-4 { top: 20%; left: 80%; animation-duration: 15s; animation-delay: 1s; font-size: 28px; }
+.float-icon.icon-5 { top: 85%; left: 70%; animation-duration: 13s; animation-delay: 4s; font-size: 24px; }
+.float-icon.icon-6 { top: 50%; left: 90%; animation-duration: 18s; animation-delay: 3s; font-size: 22px; }
 
-@keyframes floatAcross {
+@keyframes floatRandomly {
   0% {
-    transform: translateX(0) translateY(0) rotate(0deg);
+    transform: translate(0, 0) rotate(0deg);
   }
-  50% {
-    transform: translateX(55vw) translateY(-15px) rotate(180deg);
+  33% {
+    transform: translate(30px, -40px) rotate(120deg);
+  }
+  66% {
+    transform: translate(-25px, 35px) rotate(240deg);
   }
   100% {
-    transform: translateX(110vw) translateY(0) rotate(360deg);
+    transform: translate(0, 0) rotate(360deg);
   }
 }
