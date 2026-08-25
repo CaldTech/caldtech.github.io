@@ -1,48 +1,71 @@
-.services-section {
-    padding: 40px 20px;
-    text-align: center;
-    background-color: #f9f9f9;
+// Toggle Code Snippet Drawers
+function toggleSnippet(header) {
+  const box = header.parentElement;
+  box.classList.toggle('active');
 }
 
-.pricing-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
-}
+document.addEventListener('DOMContentLoaded', () => {
+  // Mobile Navigation Toggle
+  const menuToggle = document.querySelector('.menu-toggle');
+  const nav = document.getElementById('nav');
+  if (menuToggle && nav) {
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  }
 
-.service-card {
-    background: #ffffff;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 25px;
-    width: 300px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+  // Dark / Light Mode Toggle
+  const themeToggle = document.getElementById('theme-toggle');
+  const body = document.body;
+  
+  // Check for saved preference
+  if (localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark-mode');
+    if(themeToggle) themeToggle.innerHTML = '<i class="fa fa-sun"></i>';
+  }
 
-.service-card h3 {
-    margin-top: 0;
-    color: #333;
-}
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      let currentTheme = 'light';
+      if (body.classList.contains('dark-mode')) {
+        currentTheme = 'dark';
+        themeToggle.innerHTML = '<i class="fa fa-sun"></i>';
+      } else {
+        themeToggle.innerHTML = '<i class="fa fa-moon"></i>';
+      }
+      localStorage.setItem('theme', currentTheme);
+    });
+  }
 
-.service-card .price {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #0070ba; /* PayPal blue or your brand color */
-    margin: 15px 0;
-}
+  // Interactive Skill Card Filtering
+  const filterTriggers = document.querySelectorAll('.filter-trigger');
+  const projects = document.querySelectorAll('.projects-stack .project');
+  const resetBtn = document.getElementById('reset-filter');
 
-.service-card p {
-    color: #666;
-    font-size: 0.95rem;
-    flex-grow: 1;
-}
+  filterTriggers.forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const filterValue = trigger.getAttribute('data-filter');
+      
+      projects.forEach(project => {
+        const categories = project.getAttribute('data-category');
+        if (categories && categories.includes(filterValue)) {
+          project.style.display = 'block';
+        } else {
+          project.style.display = 'none';
+        }
+      });
 
-/* Ensure PayPal button containers fit neatly inside cards */
-.service-card > div[id^="paypal-container-"] {
-    margin-top: 20px;
-}
+      if (resetBtn) resetBtn.style.display = 'inline-block';
+    });
+  });
+
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      projects.forEach(project => {
+        project.style.display = 'block';
+      });
+      resetBtn.style.display = 'none';
+    });
+  }
+});
