@@ -151,13 +151,15 @@ body.dark-mode .profile-card {
   border: 3px solid #38bdf8;
 }
 
-.profile-card h2 {
-  font-size: 26px;
+/* Reduced Font Size for Profile Name Heading */
+.profile-title {
+  font-size: 20px;
   margin-bottom: 5px;
+  font-weight: 700;
 }
 
 .profile-tagline {
-  font-size: 15px;
+  font-size: 14px;
   color: #64748b;
   margin-bottom: 15px;
 }
@@ -386,7 +388,7 @@ body.dark-mode .snippet-body pre {
   padding: 8px 12px;
 }
 
-/* Skills Grid & Meters */
+/* Skills Grid */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -399,32 +401,12 @@ body.dark-mode .snippet-body pre {
   border: 1px solid #e2e8f0;
   border-radius: 10px;
   padding: 20px;
-  cursor: pointer;
   transition: transform 0.2s, border-color 0.2s;
 }
 
 .skill:hover {
   transform: translateY(-2px);
   border-color: #38bdf8;
-}
-
-.skill-bar-container {
-  width: 100%;
-  height: 6px;
-  background: #e2e8f0;
-  border-radius: 3px;
-  overflow: hidden;
-}
-
-body.dark-mode .skill-bar-container {
-  background: #334155;
-}
-
-.skill-bar-fill {
-  height: 100%;
-  background: #38bdf8;
-  width: 0;
-  transition: width 1s ease-in-out;
 }
 
 /* WhatsApp Floating Button */
