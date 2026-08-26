@@ -62,7 +62,8 @@
 <section id="profile" class="hero">
 <div class="profile-card">
 <img src="images/profile.jpg" class="hero-img" alt="Jordon Calder Profile">
-<h2>Jordon Calder (Chef Joe)</h2>
+<!-- Scaled down profile header heading -->
+<h2 class="profile-title">Jordon Calder (Chef Joe)</h2>
 <p class="profile-tagline">Data Automation Specialist, Creator & Craftsman</p>
 
 <div class="profile-badges">
@@ -90,15 +91,15 @@ I am a versatile professional operating at the intersection of data analytics an
 <section id="projects">
 <h2>Featured Projects & Media</h2>
 <p style="text-align: center; font-size: 13px; color: #64748b; margin-top: -10px; margin-bottom: 15px;">
-  Use the category tabs or click skill tags below to filter instantly!
+  Use the category tabs below to filter instantly!
 </p>
 
 <!-- Category Tab Controls -->
 <div class="project-category-tabs" style="display: flex; justify-content: center; gap: 8px; margin-bottom: 25px; flex-wrap: wrap;">
-  <button class="tab-btn active-tab" onclick="filterCategory('all', this)" style="padding: 6px 14px; border-radius: 20px; border: 1px solid #cbd5e1; background: #2563eb; color: #fff; cursor: pointer; font-size: 12px; font-weight: 600;">All</button>
-  <button class="tab-btn" onclick="filterCategory('python', this)" style="padding: 6px 14px; border-radius: 20px; border: 1px solid #cbd5e1; background: inherit; color: inherit; cursor: pointer; font-size: 12px; font-weight: 600;">Data & Tech</button>
-  <button class="tab-btn" onclick="filterCategory('craft', this)" style="padding: 6px 14px; border-radius: 20px; border: 1px solid #cbd5e1; background: inherit; color: inherit; cursor: pointer; font-size: 12px; font-weight: 600;">Crafts & Trades</button>
-  <button class="tab-btn" onclick="filterCategory('chef', this)" style="padding: 6px 14px; border-radius: 20px; border: 1px solid #cbd5e1; background: inherit; color: inherit; cursor: pointer; font-size: 12px; font-weight: 600;">Chef Joe</button>
+  <button class="tab-btn active-tab" data-cat="all" style="padding: 6px 14px; border-radius: 20px; border: 1px solid #cbd5e1; background: #2563eb; color: #fff; cursor: pointer; font-size: 12px; font-weight: 600;">All</button>
+  <button class="tab-btn" data-cat="python" style="padding: 6px 14px; border-radius: 20px; border: 1px solid #cbd5e1; background: inherit; color: inherit; cursor: pointer; font-size: 12px; font-weight: 600;">Data & Tech</button>
+  <button class="tab-btn" data-cat="craft" style="padding: 6px 14px; border-radius: 20px; border: 1px solid #cbd5e1; background: inherit; color: inherit; cursor: pointer; font-size: 12px; font-weight: 600;">Crafts & Trades</button>
+  <button class="tab-btn" data-cat="chef" style="padding: 6px 14px; border-radius: 20px; border: 1px solid #cbd5e1; background: inherit; color: inherit; cursor: pointer; font-size: 12px; font-weight: 600;">Chef Joe</button>
 </div>
 
 <div class="projects-stack">
@@ -225,49 +226,23 @@ check_environment()</code></pre>
 </div>
 </section>
 
-<!-- Interactive Skills Section -->
+<!-- Interactive Skills Section (Cleaned up redundant skill meters) -->
 <section id="skills">
-<h2>Technical & Hands-On Skills</h2>
-<p style="text-align: center; font-size: 13px; color: #64748b; margin-top: -10px; margin-bottom: 20px;">Click any skill card to filter projects above!</p>
+<h2>Core Competencies</h2>
+<p style="text-align: center; font-size: 13px; color: #64748b; margin-top: -10px; margin-bottom: 20px;">Overview of technical domains and hands-on trades.</p>
 <div class="skills-grid">
-<div class="skill filter-trigger" data-filter="python">
-  <div style="display:flex; justify-content:space-between; margin-bottom:5px;">
-    <span>Python Automation</span>
-    <span style="font-size:12px; color:#666;">82%</span>
+  <div class="skill">
+    <h3 style="font-size: 16px; color: #2563eb; margin-top:0;"><i class="fa fa-database"></i> Data Analytics & Python</h3>
+    <p style="font-size: 13px; color: #64748b; text-align: left; margin-top: 5px;">Building automated data pipelines, SQLite integration, and telemetry reporting.</p>
   </div>
-  <div class="skill-bar-container"><div class="skill-bar-fill" data-width="82%"></div></div>
-</div>
-<div class="skill filter-trigger" data-filter="etl">
-  <div style="display:flex; justify-content:space-between; margin-bottom:5px;">
-    <span>ETL Pipelines</span>
-    <span style="font-size:12px; color:#666;">78%</span>
+  <div class="skill">
+    <h3 style="font-size: 16px; color: #16a34a; margin-top:0;"><i class="fa fa-tools"></i> Workshop & Hardware</h3>
+    <p style="font-size: 13px; color: #64748b; text-align: left; margin-top: 5px;">CNC laser engraving, device screen repair, and off-grid solar planning.</p>
   </div>
-  <div class="skill-bar-container"><div class="skill-bar-fill" data-width="78%"></div></div>
-</div>
-<div class="skill filter-trigger" data-filter="sql">
-  <div style="display:flex; justify-content:space-between; margin-bottom:5px;">
-    <span>SQL & Data Management</span>
-    <span style="font-size:12px; color:#666;">75%</span>
+  <div class="skill">
+    <h3 style="font-size: 16px; color: #d97706; margin-top:0;"><i class="fa fa-utensils"></i> Culinary Arts (Chef Joe)</h3>
+    <p style="font-size: 13px; color: #64748b; text-align: left; margin-top: 5px;">Quick recipe development, short-form food media, and home cooking guides.</p>
   </div>
-  <div class="skill-bar-container"><div class="skill-bar-fill" data-width="75%"></div></div>
-</div>
-<div class="skill filter-trigger" data-filter="chef">
-  <div style="display:flex; justify-content:space-between; margin-bottom:5px;">
-    <span>Culinary Arts (Chef Joe)</span>
-    <span style="font-size:12px; color:#666;">84%</span>
-  </div>
-  <div class="skill-bar-container"><div class="skill-bar-fill" data-width="84%"></div></div>
-</div>
-<div class="skill filter-trigger" data-filter="craft">
-  <div style="display:flex; justify-content:space-between; margin-bottom:5px;">
-    <span>Craftsmanship & Trades</span>
-    <span style="font-size:12px; color:#666;">72%</span>
-  </div>
-  <div class="skill-bar-container"><div class="skill-bar-fill" data-width="72%"></div></div>
-</div>
-</div>
-<div style="text-align:center; margin-top: 15px;">
-  <button id="reset-filter" class="btn" style="background:#64748b; font-size:12px; padding:6px 14px; display:none;">Show All Projects</button>
 </div>
 </section>
 
