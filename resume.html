@@ -7,55 +7,104 @@
 <link rel="stylesheet" href="style.css">
 <style>
   body {
-    background: #f5f7fb;
+    background-color: #f8fafc;
+    color: #0f172a;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     justify-content: center;
     align-items: center;
     margin: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
+
+  /* Dark Mode Support matching your index page */
+  body.dark-mode {
+    background-color: #0f172a;
+    color: #f8fafc;
+  }
+
   .request-card {
-    background: white;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
     padding: 40px;
     border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
     max-width: 450px;
     width: 90%;
     text-align: center;
+    transition: background 0.3s ease, border-color 0.3s ease;
   }
+
+  body.dark-mode .request-card {
+    background: #1e293b;
+    border-color: #334155;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+
   .request-card h2 {
     margin-bottom: 10px;
-    color: #111;
+    font-size: 22px;
+    color: inherit;
   }
+
   .request-card p {
-    color: #666;
+    color: #64748b;
     font-size: 14px;
     margin-bottom: 25px;
+    line-height: 1.5;
   }
+
+  body.dark-mode .request-card p {
+    color: #94a3b8;
+  }
+
   .form-group {
     text-align: left;
     margin-bottom: 15px;
   }
+
   .form-group label {
     display: block;
     font-size: 13px;
     font-weight: 600;
-    color: #333;
+    color: #334155;
     margin-bottom: 5px;
   }
+
+  body.dark-mode .form-group label {
+    color: #cbd5e1;
+  }
+
   .form-group input, .form-group textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #cbd5e1;
     border-radius: 6px;
     font-size: 14px;
     box-sizing: border-box;
+    background: #ffffff;
+    color: #0f172a;
+    transition: border-color 0.2s, background 0.2s, color 0.2s;
   }
+
+  body.dark-mode .form-group input, 
+  body.dark-mode .form-group textarea {
+    background: #0f172a;
+    border-color: #334155;
+    color: #f8fafc;
+  }
+
+  .form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #38bdf8;
+  }
+
   .form-group textarea {
     resize: vertical;
     height: 80px;
   }
+
   .btn-submit {
     background: #2563eb;
     color: white;
@@ -67,22 +116,35 @@
     font-weight: 500;
     cursor: pointer;
     margin-top: 10px;
+    transition: background 0.2s;
   }
+
   .btn-submit:hover {
     background: #1d4ed8;
   }
+
   .back-link {
     display: block;
     margin-top: 20px;
-    color: #666;
+    color: #64748b;
     text-decoration: none;
     font-size: 13px;
+    transition: color 0.2s;
   }
-  .back-link:hover { text-decoration: underline; }
-  
+
+  body.dark-mode .back-link {
+    color: #94a3b8;
+  }
+
+  .back-link:hover { 
+    color: #2563eb;
+    text-decoration: underline; 
+  }
+
   #success-message {
     display: none;
   }
+
   .success-icon {
     font-size: 48px;
     color: #25D366;
@@ -131,6 +193,11 @@
 </div>
 
 <script>
+  // Check if user has dark mode enabled on main page and apply to resume page
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
   document.getElementById('resumeForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const formData = new FormData(this);
