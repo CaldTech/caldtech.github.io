@@ -65,6 +65,12 @@
 <h2 class="profile-title">Jordon Calder (Chef Joe)</h2>
 <p class="profile-tagline">Data Automation Specialist, Creator & Craftsman</p>
 
+<!-- Live Telemetry Status Bar -->
+<div class="telemetry-bar">
+  <span>⚡ Status: Building Python ETL Pipelines</span>
+  <span>🛠️ Workshop: CNC Laser & Pallet Craft Active</span>
+</div>
+
 <div class="profile-badges">
   <span class="badge data">📊 Data & Risk Analytics</span>
   <span class="badge chef">🍳 Chef Joe</span>
@@ -91,15 +97,15 @@ I am a versatile professional operating at the intersection of data analytics an
 <section id="projects">
 <h2>Featured Projects & Media</h2>
 <p style="text-align: center; font-size: 13px; color: #64748b; margin-top: -10px; margin-bottom: 15px;">
-  Filter by category tabs or use live search below!
+  Filter by category tabs, search keywords, or click 'Deep Dive' for extended specs!
 </p>
 
-<!-- Live Keyword Search Bar (Option 1) -->
+<!-- Live Keyword Search Bar -->
 <div style="max-width: 400px; margin: 0 auto 20px auto;">
   <input type="text" id="project-search" placeholder="🔍 Search projects, python, sqlite, recipes..." style="width: 100%; padding: 10px 15px; border-radius: 20px; border: 1px solid #cbd5e1; font-size: 13px; outline: none; background: inherit; color: inherit;">
 </div>
 
-<!-- Category Tab Controls (Option C) -->
+<!-- Category Tab Controls -->
 <div class="project-category-tabs" style="display: flex; justify-content: center; gap: 8px; margin-bottom: 25px; flex-wrap: wrap;">
   <button class="tab-btn active-tab" data-cat="all" style="padding: 6px 14px; border-radius: 20px; border: 1px solid #cbd5e1; background: #2563eb; color: #fff; cursor: pointer; font-size: 12px; font-weight: 600;">All</button>
   <button class="tab-btn" data-cat="python" style="padding: 6px 14px; border-radius: 20px; border: 1px solid #cbd5e1; background: inherit; color: inherit; cursor: pointer; font-size: 12px; font-weight: 600;">Data & Tech</button>
@@ -151,6 +157,7 @@ def ingest_medical_data(csv_path, db_name="revenue.db"):
   </div>
 
   <div class="project-actions centered-actions">
+    <button class="btn" style="background:#0284c7;" onclick="openModal('medical')"><i class="fa fa-info-circle"></i> Deep Dive</button>
     <a href="https://github.com/CaldTech/medical-revenue-pipeline" target="_blank" class="btn"><i class="fab fa-github"></i> View Code</a>
     <a href="https://youtube.com/shorts/ulhOsd90g2Y" target="_blank" class="btn btn-youtube icon-only"><i class="fab fa-youtube"></i></a>
     <a href="https://vt.tiktok.com/ZSVQbEp7R/" target="_blank" class="btn btn-tiktok icon-only"><i class="fab fa-tiktok"></i></a>
@@ -196,6 +203,7 @@ check_environment()</code></pre>
   </div>
 
   <div class="project-actions centered-actions">
+    <button class="btn" style="background:#0284c7;" onclick="openModal('samsung')"><i class="fa fa-info-circle"></i> Deep Dive</button>
     <a href="https://www.youtube.com/watch?v=LqaYXnnREUw" target="_blank" class="btn btn-youtube icon-only"><i class="fab fa-youtube"></i></a>
     <a href="https://vt.tiktok.com/ZSVQQkL72/" target="_blank" class="btn btn-tiktok icon-only"><i class="fab fa-tiktok"></i></a>
   </div>
@@ -223,6 +231,7 @@ check_environment()</code></pre>
     <iframe width="100%" height="250" src="https://www.youtube.com/embed/_8lP6NOHxSI?autoplay=1&mute=1" title="Banana Fritters Recipe" style="border:none; border-radius:8px;" allow="autoplay" allowfullscreen></iframe>
   </div>
   <div class="project-actions centered-actions">
+    <button class="btn" style="background:#0284c7;" onclick="openModal('banana')"><i class="fa fa-info-circle"></i> Deep Dive</button>
     <a href="https://youtube.com/shorts/_8lP6NOHxSI" target="_blank" class="btn btn-youtube icon-only"><i class="fab fa-youtube"></i></a>
   </div>
 </div>
@@ -230,6 +239,16 @@ check_environment()</code></pre>
 
 </div>
 </section>
+
+<!-- Deep Dive Overlay Modal -->
+<div id="project-modal" class="modal-overlay" onclick="closeModalOutside(event)">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+    <div id="modal-body-content">
+      <!-- Dynamic Content Injected via JS -->
+    </div>
+  </div>
+</div>
 
 <!-- Core Competencies -->
 <section id="skills">
@@ -288,6 +307,7 @@ The digital software and physical trade equipment used to engineer data solution
 <a href="https://youtube.com/@calderofficial" target="_blank">YouTube</a> |
 <a href="https://tiktok.com/@calderofficial" target="_blank">TikTok</a>
 </p>
+<!-- Quiet Support Link Placed at Bottom Only -->
 <div style="margin-top: 25px; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.08);">
   <p style="font-size: 13px; color: #64748b; margin-bottom: 8px;">Supporting Continuous Education & Professional Growth:</p>
   <a href="https://paypal.me/JordonCalder" target="_blank" class="btn" style="background: #0070ba; font-size: 13px; padding: 8px 16px;"><i class="fab fa-paypal"></i> Support via PayPal</a>
