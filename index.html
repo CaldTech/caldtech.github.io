@@ -62,7 +62,6 @@
 <section id="profile" class="hero">
 <div class="profile-card">
 <img src="images/profile.jpg" class="hero-img" alt="Jordon Calder Profile">
-<!-- Scaled down profile header heading -->
 <h2 class="profile-title">Jordon Calder (Chef Joe)</h2>
 <p class="profile-tagline">Data Automation Specialist, Creator & Craftsman</p>
 
@@ -77,6 +76,7 @@ Bridging enterprise-level data pipelines, software engineering, and hands-on cra
 </p>
 <div style="display:flex; justify-content:center; gap:10px; flex-wrap:wrap;">
   <a href="#projects" class="btn">Explore Work</a>
+  <a href="resume.html" class="btn" style="background: #475569;"><i class="fa fa-file-alt"></i> Request Resume</a>
 </div>
 </div>
 </section>
@@ -91,10 +91,15 @@ I am a versatile professional operating at the intersection of data analytics an
 <section id="projects">
 <h2>Featured Projects & Media</h2>
 <p style="text-align: center; font-size: 13px; color: #64748b; margin-top: -10px; margin-bottom: 15px;">
-  Use the category tabs below to filter instantly!
+  Filter by category tabs or use live search below!
 </p>
 
-<!-- Category Tab Controls -->
+<!-- Live Keyword Search Bar (Option 1) -->
+<div style="max-width: 400px; margin: 0 auto 20px auto;">
+  <input type="text" id="project-search" placeholder="🔍 Search projects, python, sqlite, recipes..." style="width: 100%; padding: 10px 15px; border-radius: 20px; border: 1px solid #cbd5e1; font-size: 13px; outline: none; background: inherit; color: inherit;">
+</div>
+
+<!-- Category Tab Controls (Option C) -->
 <div class="project-category-tabs" style="display: flex; justify-content: center; gap: 8px; margin-bottom: 25px; flex-wrap: wrap;">
   <button class="tab-btn active-tab" data-cat="all" style="padding: 6px 14px; border-radius: 20px; border: 1px solid #cbd5e1; background: #2563eb; color: #fff; cursor: pointer; font-size: 12px; font-weight: 600;">All</button>
   <button class="tab-btn" data-cat="python" style="padding: 6px 14px; border-radius: 20px; border: 1px solid #cbd5e1; background: inherit; color: inherit; cursor: pointer; font-size: 12px; font-weight: 600;">Data & Tech</button>
@@ -105,7 +110,7 @@ I am a versatile professional operating at the intersection of data analytics an
 <div class="projects-stack">
 
 <!-- Medical Data Automation Pipeline -->
-<div class="project medical-card" data-category="python etl sql">
+<div class="project medical-card" data-category="python etl sql" data-keywords="medical revenue data pipeline python sqlite workflow analytics">
 <div class="bg-animation">
   <i class="fa fa-heartbeat float-icon icon-1"></i>
   <i class="fa fa-syringe float-icon icon-2"></i>
@@ -154,7 +159,7 @@ def ingest_medical_data(csv_path, db_name="revenue.db"):
 </div>
 
 <!-- Samsung Screen Repair Tutorial -->
-<div class="project tech-card" data-category="craft">
+<div class="project tech-card" data-category="craft" data-keywords="samsung tablet screen repair hardware restoration restoration electronics troubleshooting">
 <div class="bg-animation">
   <i class="fa fa-code float-icon icon-1"></i>
   <i class="fa fa-book float-icon icon-2"></i>
@@ -198,7 +203,7 @@ check_environment()</code></pre>
 </div>
 
 <!-- Chef Joe: Banana Fritters -->
-<div class="project culinary-card" data-category="chef">
+<div class="project culinary-card" data-category="chef" data-keywords="banana fritters recipe overripe bananas chef joe snack cooking food">
 <div class="bg-animation">
   <i class="fa fa-utensils float-icon icon-1"></i>
   <i class="fa fa-blender float-icon icon-2"></i>
@@ -226,7 +231,7 @@ check_environment()</code></pre>
 </div>
 </section>
 
-<!-- Interactive Skills Section (Cleaned up redundant skill meters) -->
+<!-- Core Competencies -->
 <section id="skills">
 <h2>Core Competencies</h2>
 <p style="text-align: center; font-size: 13px; color: #64748b; margin-top: -10px; margin-bottom: 20px;">Overview of technical domains and hands-on trades.</p>
@@ -283,7 +288,6 @@ The digital software and physical trade equipment used to engineer data solution
 <a href="https://youtube.com/@calderofficial" target="_blank">YouTube</a> |
 <a href="https://tiktok.com/@calderofficial" target="_blank">TikTok</a>
 </p>
-<!-- Quiet Support Link Placed at Bottom Only -->
 <div style="margin-top: 25px; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.08);">
   <p style="font-size: 13px; color: #64748b; margin-bottom: 8px;">Supporting Continuous Education & Professional Growth:</p>
   <a href="https://paypal.me/JordonCalder" target="_blank" class="btn" style="background: #0070ba; font-size: 13px; padding: 8px 16px;"><i class="fab fa-paypal"></i> Support via PayPal</a>
