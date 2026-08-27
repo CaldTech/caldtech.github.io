@@ -37,13 +37,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Category Tab Filtering Logic (Fixed Event Listener Binding)
+  // Category Tab Filtering Logic
   const tabs = document.querySelectorAll('.tab-btn');
   const projects = document.querySelectorAll('.projects-stack .project');
+  const searchInput = document.getElementById('project-search');
 
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
       const category = tab.getAttribute('data-cat');
+
+      // Clear search input when using tabs
+      if (searchInput) searchInput.value = '';
 
       // Update active styling across tabs
       tabs.forEach(t => {
@@ -64,4 +68,22 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
+
+  // Live Keyword Search Bar Logic (Option 1)
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase().trim();
+
+      projects.forEach(project => {
+        const keywords = project.getAttribute('data-keywords') || '';
+        const textContent = project.textContent.toLowerCase();
+
+        if (keywords.includes(query) || textContent.includes(query)) {
+          project.style.display = 'block';
+        } else {
+          project.style.display = 'none';
+        }
+      });
+    });
+  }
 });
