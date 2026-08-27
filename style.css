@@ -63,6 +63,12 @@ body.dark-mode footer {
   border-top: 1px solid #334155;
 }
 
+body.dark-mode input#project-search {
+  background: #1e293b;
+  color: #f8fafc;
+  border-color: #334155;
+}
+
 /* Header & Sticky Navigation */
 header {
   position: sticky;
@@ -151,7 +157,6 @@ body.dark-mode .profile-card {
   border: 3px solid #38bdf8;
 }
 
-/* Reduced Font Size for Profile Name Heading */
 .profile-title {
   font-size: 20px;
   margin-bottom: 5px;
@@ -270,7 +275,6 @@ body.dark-mode .float-icon {
   color: rgba(56, 189, 248, 0.05);
 }
 
-/* Randomized floating icon coordinates & timings */
 .float-icon.icon-1 { top: 10%; left: 10%; animation-duration: 9s; }
 .float-icon.icon-2 { top: 75%; left: 15%; animation-duration: 14s; }
 .float-icon.icon-3 { top: 20%; left: 80%; animation-duration: 11s; }
